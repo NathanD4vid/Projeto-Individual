@@ -113,10 +113,10 @@ body {
 
 @media screen and (max-width: 1400px){
     .formulario .forms {
-        height: 64vh;
+        height: 70vh;
     }
 
     .forms .logoOver2 {
-        height: 17vh;
+        height: 18vh;
     }
 }
