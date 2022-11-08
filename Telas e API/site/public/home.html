@@ -24,12 +24,12 @@
                     <div class="conteudos">
                         <a href=""">Sobre</a> 
                         <a href="">Dentro do jogo</a>
-                        <a href="">Prêmios  </a>
+                        <a href="">Prêmios</a>
                     </div>  
                 </div>  
                 <ul>
-                    <li><a href="">Login</a></li>
-                    <li id="cadastroBotao"><a href="">Sair</a></li>    
+                    <h3><span id="b_usuario">usuário</span></h3>
+                    <li id="cadastroBotao"><a href="index.html">Sair</a></li>    
                 </ul>
             </div>
         </div>
@@ -121,7 +121,10 @@
     </div>
 </body>
 </html>
+
 <script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO
+
     function mudar() {
         img_classe.src = 'img/tanque.png'
         tituloClasse.innerHTML = `Tanque`

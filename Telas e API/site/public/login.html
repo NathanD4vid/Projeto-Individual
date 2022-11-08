@@ -30,7 +30,7 @@
 
                     <button class="botaoEntrar" href="" onclick="entrar()">Entrar</button>
 
-                    <a class="botaoCadastro" href="">Não tem uma conta?</a>
+                    <a class="botaoCadastro" href="cadastro.html">Não tem uma conta?</a>
                 </div>
             </div>
         </div>
@@ -80,7 +80,7 @@
                     console.log(JSON.stringify(json));
 
                     sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.NOME_USUARIO = json.username;
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
