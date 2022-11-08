@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link REL="SHORTCUT ICON" HREF="img/favicon.ico">
+    <title>Home</title>
+</head>
+<body>
+
+    <div class="banner">
+        <div class="header">
+            <div class="container">
+                <div class="logos">
+                    <div class="blizzard">
+                        <img src="img/Blizzard-Logo.png" alt="">
+                    </div>
+                    <div class="over_logo">
+                        <img src="img/logo.png" alt="" class="logoOver">
+                        <img src="img/over2.png" alt="" class="escritaOver">
+                    </div>
+                    <div class="conteudos">
+                        <a href=""">Sobre</a> 
+                        <a href="">Dentro do jogo</a>
+                        <a href="">Prêmios  </a>
+                    </div>  
+                </div>  
+                <ul>
+                    <li><a href="">Login</a></li>
+                    <li id="cadastroBotao"><a href="">Sair</a></li>    
+                </ul>
+            </div>
+        </div>
+    </div>
+        
+    <div class="inicio">
+        <div class="container">
+            <div class="owLeague">
+                <h2>A Overwatch League</h2>
+                <p>Após o sucesso estrondoso de Overwatch desde o seu lançamento, passando do número total de 35 milhões de jogadores, a Blizzard Entertainment passou a desenvolver a sua liga com alto investimento e uma proposta ousada. Similar às ligas profissionais americanas, cada equipe representa uma grande cidade, possui um dono, e seus atletas possuem salários regulares, benefícios e participação nas premiações.</p>
+            </div>
+            <div class="owLeagueBanner">
+                <img src="img/owLeague.png" alt="">
+            </div>
+        </div>
+    </div>
+        
+    <div class="classeJogo">
+        <div class="container">
+            <div class="campeaoTexto">
+                <div class="tabela">
+                    <h2>Os Campeões</h2>
+                    <table>
+                        <tr>
+                            <th>Temporada</th>
+                            <th>Time vencedor</th>
+                            <th>Pontuação</th>
+                            <th>Time perdedor</th>
+                        </tr>
+                        <tr>
+                            <td>2018</td>
+                            <td>London Spitfire</td>
+                            <td>2 - 0</td>
+                            <td>Philadelphia Fusion</td>
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td>San Francisco Shock</td>
+                            <td>4 - 0</td>
+                            <td>Vancouver Titans</td>
+                        </tr>
+                        <tr>
+                            <td>2020</td>
+                            <td>San Francisco Shock</td>
+                            <td>4 - 2</td>
+                            <td>Seoul Dynasty</td>
+                        </tr>
+                        <tr>
+                            <td>2021</td>
+                            <td>Sanghai Dragons</td>
+                            <td>4 - 0</td>
+                            <td>Atlanta Reign</td>
+                        </tr>
+                        <tr>
+                            <td>2022</td>
+                            <td>Dallas Fuel</td>
+                            <td>4 - 3</td>
+                            <td>San Francisco Shock</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="campeaoImagem">
+                <div class="boxes">
+                    <div class="box">
+                        <img src="img/london.jpg" alt="">
+                        <img src="img/san-francisco.jpg" alt="">
+                    </div>
+                    <div class="box2">
+                        <img src="img/shanghai-dragons.jpg" alt="">
+                        <img src="img/dallas.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="premios">
+        <div class="container">
+            
+        </div>
+    </div>
+        
+    <div class="footer">
+        <div class="container">
+            <span>&copy 2000 e Sempre -- Nathan David</span>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+<script>
+    function mudar() {
+        img_classe.src = 'img/tanque.png'
+        tituloClasse.innerHTML = `Tanque`
+        descricaoClasse.innerHTML = `Os hérois com função de tanque resistem ao dano e destroem posiçoes fortificadas, como inimigos agrupados e pontos de obstrução. Quando você é um tanque, é você quem lidera a investida.`
+    }
+    function mudar2() {
+        img_classe.src = 'img/dano.png'
+        tituloClasse.innerHTML = `Dano`
+        descricaoClasse.innerHTML = `Heróis de dano são responsáveis por procurar, atacar e aniquilar inimigos, valendo-se de uma ampla variedade de ferramentas, habilidades e estratégias. Perigosos porém frágeis, esses heróis precisam de apoio para sobreviver.`
+    }
+    function mudar3() {
+        img_classe.src = 'img/suporte.png'
+        tituloClasse.innerHTML = `Suporte`
+        descricaoClasse.innerHTML = `Heróis de suporte fortalecem seus aliados, pois são capazes de curá-los, protegê-los com escudos, aumentar seu poder de dano e imobilizar os inimigos. Como suporte, você é fundamental para a sobrevivência da sua equipe.`
+    }
+</script>

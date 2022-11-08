@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.geral {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+}
+
+.banner {
+    height: 100vh;
+    width: 50%;
+    background-image: url("../img/bannerTracer.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 25% ;
+}
+
+.formulario {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario .forms {
+    height: 63vh;
+    width: 23vw;
+    margin-top: -20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.forms .logoOver2{
+    height: 19vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.forms .logoOver2 img{
+    align-self: center;
+    width: 25%;
+}
+
+.logoOver2 .textTop {
+    height: 7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logoOver2 h1, p {
+    margin: 0;
+}
+
+.logoOver2 p {
+    font-size: 1.1rem;
+    line-height: 25px;
+}
+
+.forms .campos {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.campos p {
+    margin-top: 3vh;
+    font-size: 1.2rem;
+}
+
+.campos input {
+    padding: 0 1.3vw;
+    font-size: 1.2rem;
+    outline: 0;
+    height: 4vh;    
+    border: none;
+    border-bottom: solid 1px #eb7e40;
+}
+
+.campos .botaoEntrar {
+    font-size: 1.2rem;
+    margin-top: 5vh;
+    align-self: center;
+    width: 90%;
+    height: 5.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eb7e40;
+    color: #FFFF;
+    border-radius: 1vw;
+    border: none;
+}
+
+.campos .botaoCadastro {
+    align-self: center;
+    text-align: center;
+    font-size: 1rem;
+    width: 50%;
+    margin-top: 5vh;
+    text-decoration: none;
+    color: #eb7e40;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1400px){
+    .formulario .forms {
+        height: 64vh;
+    }
+
+    .forms .logoOver2 {
+        height: 17vh;
+    }
+}
