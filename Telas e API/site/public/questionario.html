@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/questionario.css">
+    <link REL="SHORTCUT ICON" HREF="img/favicon.ico">
+    <title>Questionário</title>
+</head>
+<body>
+
+    <div class="banner">
+        <div class="header">
+            <div class="container">
+                <div class="logos">
+                    <div class="blizzard">
+                        <img src="img/Blizzard-Logo.png" alt="">
+                    </div>
+                    <div class="over_logo">
+                        <img src="img/logo.png" alt="" class="logoOver">
+                        <img src="img/over2.png" alt="" class="escritaOver">
+                    </div>
+                    <div class="conteudos">
+                        <a href=""">Sobre</a> 
+                        <a href="">Dentro do jogo</a>
+                        <a href="">Prêmios</a>
+                    </div>  
+                </div>  
+                <ul>
+                    <h3><span id="b_usuario">usuário</span></h3>
+                    <li id="cadastroBotao"><a href="index.html">Sair</a></li>    
+                </ul>
+            </div>
+        </div>
+
+        <div class="premios">
+            <div class="container">
+                <div class="tituloQuestionario">
+                    <h3>Preparado para um desafio?</h3>
+                </div>
+
+                <div class="questionario">
+                    <div class="perguntas" style="display: block;">
+                        <div class="alternativas">
+                            <label for="opcao">1) Qual o personagem de nacionalidade brasileria de Overwatch?</label>
+                            <div>
+                                <input id="dps" type="radio" name="opcao" value="1"/> Soldado 76
+                            </div>
+                            <div>
+                                <input id="tank" type="radio" name="opcao" value="1"/> Lucio
+                            </div>
+                            <div>
+                                <input id="sup" type="radio" name="opcao" value="1"/> Winston
+                            </div>
+                            <div>
+                                <input id="indeciso" type="radio" name="opcao" value="1"/> Ana
+                            </div>
+                            <button>Próxima</button>
+                        </div>
+                    </div>
+    
+                    <div class="perguntas" style="display: none;">
+                        <div class="alternativas">
+                            <label for="opcao2">2) Qual mapa se passa no Brasil?</label>
+                            <div>
+                                <input id="dps2" type="radio" name="opcao2" value="1"/>  Rota 66
+                            </div>
+                            <div>
+                                <input id="tank2" type="radio" name="opcao2" value="1"/> Busan
+                            </div>
+                            <div>
+                                <input id="sup2" type="radio" name="opcao2" value="1"/> Paráiso
+                            </div>
+                            <div>
+                                <input id="indeciso2" type="radio" name="opcao2" value="1"/> Kings Row
+                            </div>
+                            <button>Próxima</button>
+                        </div>
+                    </div>
+    
+                    <div class="perguntas" style="display: none;">
+                        <div class="alternativas">
+                            <label for="opcao3">3) Qual personagem é irmão do Genji?</label>
+                            <div>
+                                <input id="dps3" type="radio" name="opcao3" value="1"/> Hanzo
+                            </div>
+                            <div>
+                                <input id="tank3" type="radio" name="opcao3" value="1"/> Bastion
+                            </div>
+                            <div>
+                                <input id="sup3" type="radio" name="opcao3" value="1"/> Orisa
+                            </div>
+                            <div>
+                                <input id="indeciso3" type="radio" name="opcao3" value="1"/> Moira
+                            </div>
+                            <button>Próxima</button>
+                        </div>
+                    </div>
+    
+                    <div class="perguntas" style="display: none;">
+                        <div class="alternativas">
+                            <label for="opcao4">4) Quando overwatch ganhou o Game Of The Year?</label>
+                            <div>
+                                <input id="dps4" type="radio" name="opcao4"  value="1"/> 2020
+                            </div>
+                            <div>
+                                <input id="tank4" type="radio" name="opcao4" value="1"/> 2018
+                            </div>
+                            <div>
+                                <input id="sup4" type="radio" name="opcao4" value="1"/> 2016
+                            </div>
+                            <div>
+                                <input id="indeciso4" type="radio" name="opcao4" value="1"/> Nunca ganhou
+                            </div>
+                            <button>Próxima</button>
+                        </div>
+                    </div>
+    
+                    <div class="perguntas" style="display: none;">
+                        <div class="alternativas">
+                            <label for="opcao5">5) Qual a organização inimiga da Overwatch?</label>
+                            <div>
+                                <input id="dps5" type="radio" name="opcao5" value="20"/> Talon
+                            </div>
+                            <div>
+                                <input id="tank5" type="radio" name="opcao5" value="10"/> Blackwatch
+                            </div>
+                            <div>
+                                <input id="sup5" type="radio" name="opcao5" value="1"/> Gangue Deadlock
+                            </div>
+                            <div>
+                                <input id="indeciso4" type="radio" name="opcao4" value="1"/> Clã Shimada
+                            </div>
+                            <button>Próxima</button>
+                        </div>
+                    </div>
+
+                    <div class="perguntas" style="display: none;">
+                        <div class="alternativas">
+                            <label for="opcao5">6) O que a d.va fala depois que ela utiliza sua ultimate?</label>
+                            <div>
+                                <input id="dps5" type="radio" name="opcao5" value="20"/> "La vaiii"
+                            </div>
+                            <div>
+                                <input id="tank5" type="radio" name="opcao5" value="10"/> "Perde pra nerfar noob"
+                            </div>
+                            <div>
+                                <input id="sup5" type="radio" name="opcao5" value="1"/> "Desculpe"
+                            </div>
+                            <div>
+                                <input id="indeciso4" type="radio" name="opcao4" value="1"/> "Nathan Muito Gato"
+                            </div>
+                            <button>Próxima</button>
+                        </div>
+                    </div>
+
+                    <div class="perguntas" style="display: none;">
+                        <div class="alternativas">
+                            <label for="opcao5">7) Qual evento levou a criação da Overwatch?</label>
+                            <div>
+                                <input id="dps5" type="radio" name="opcao5" value="20"/> Ataque Alienigêna
+                            </div>
+                            <div>
+                                <input id="tank5" type="radio" name="opcao5" value="10"/> Aquecimento Global
+                            </div>
+                            <div>
+                                <input id="sup5" type="radio" name="opcao5" value="1"/> Ataque do Thanos
+                            </div>
+                            <div>
+                                <input id="indeciso4" type="radio" name="opcao4" value="1"/> A Crise Ôminica
+                            </div>
+                            <button>Próxima</button>
+                        </div>
+                    </div>
+
+                    <div class="perguntas" style="display: none;">
+                        <div class="alternativas">
+                            <label for="opcao5">8) Qual personagem tem uma ultimate que te deixa preso em um buraco negro?</label>
+                            <div>
+                                <input id="dps5" type="radio" name="opcao5" value="20"/> Zarya
+                            </div>
+                            <div>
+                                <input id="tank5" type="radio" name="opcao5" value="10"/> Sigma
+                            </div>
+                            <div>
+                                <input id="sup5" type="radio" name="opcao5" value="1"/> Orisa
+                            </div>
+                            <div>
+                                <input id="indeciso4" type="radio" name="opcao4" value="1"/> RoadHog
+                            </div>
+                            <button>Próxima</button>
+                        </div>
+                    </div>
+
+                    <div class="perguntas" style="display: none;">
+                        <div class="alternativas">
+                            <label for="opcao5">9) Quem fez um recall para os membros da overwatch após a sua queda?</label>
+                            <div>
+                                <input id="dps5" type="radio" name="opcao5" value="20"/> Winston
+                            </div>
+                            <div>
+                                <input id="tank5" type="radio" name="opcao5" value="10"/> Reaper
+                            </div>
+                            <div>
+                                <input id="sup5" type="radio" name="opcao5" value="1"/> Ana
+                            </div>
+                            <div>
+                                <input id="indeciso4" type="radio" name="opcao4" value="1"/> Comandante Jack Morrison
+                            </div>
+                            <button>Próxima</button>
+                        </div>
+                    </div>
+
+                    <div class="perguntas" style="display: none;">
+                        <div class="alternativas">
+                            <label for="opcao5">10) Qual o elo máximo do Overwatch</label>
+                            <div>
+                                <input id="dps5" type="radio" name="opcao5" value="20"/> Grão Mestre
+                            </div>
+                            <div>
+                                <input id="tank5" type="radio" name="opcao5" value="10"/> Global
+                            </div>
+                            <div>
+                                <input id="sup5" type="radio" name="opcao5" value="1"/> Predator
+                            </div>
+                            <div>
+                                <input id="indeciso4" type="radio" name="opcao4" value="1"/> Radiante
+                            </div>
+                            <button>Próxima</button>
+                        </div>
+                    </div>
+
+                    <div class="perguntas" style="display: none;">
+                        <div class="alternativas">
+                            <label for="opcao5">11) Qual o elo mínimo em Overwatch?</label>
+                            <div>
+                                <input id="dps5" type="radio" name="opcao5" value="20"/> Bronze  
+                            </div>
+                            <div>
+                                <input id="tank5" type="radio" name="opcao5" value="10"/> Latão 
+                            </div>
+                            <div>
+                                <input id="sup5" type="radio" name="opcao5" value="1"/> Ferro 
+                            </div>
+                            <div>
+                                <input id="indeciso4" type="radio" name="opcao4" value="1"/> Lama 
+                            </div>
+                            <button>Próxima</button>
+                        </div>
+                    </div>
+
+                    <div class="perguntas" style="display: none;">
+                        <div class="alternativas">
+                            <label for="opcao5">12) Quais são os tipos de mapa disponíveis na rankeada?</label>
+                            <div>
+                                <input id="dps5" type="radio" name="opcao5" value="20"/> Híbrido, Escolta, Controle e Avanço
+                            </div>
+                            <div>
+                                <input id="tank5" type="radio" name="opcao5" value="10"/> Híbrido, Escolta, Avanço e Pegue a Bandeira
+                            </div>
+                            <div>
+                                <input id="sup5" type="radio" name="opcao5" value="1"/> Escolta, Avanço, Pegue a Bandeira e Corrida
+                            </div>
+                            <div>
+                                <input id="indeciso4" type="radio" name="opcao4" value="1"/> Escolta, Controle, Avanço e Vingança de Junkstein
+                            </div>
+                            <button>Próxima</button>
+                        </div>
+                    </div>
+
+                    <div class="perguntas" style="display: none;">
+                        <div class="alternativas">
+                            <label for="opcao5">13) A personagem Phara tem uma mãe membra da Overwatch. Quem é ela?</label>
+                            <div>
+                                <input id="dps5" type="radio" name="opcao5" value="20"/> Ana Amari
+                            </div>
+                            <div>
+                                <input id="tank5" type="radio" name="opcao5" value="10"/> Brigitte Lindholm
+                            </div>
+                            <div>
+                                <input id="sup5" type="radio" name="opcao5" value="1"/> Doutora Angela Ziegler
+                            </div>
+                            <div>
+                                <input id="indeciso4" type="radio" name="opcao4" value="1"/> Aleksandra Zaryanova
+                            </div>
+                            <button>Próxima</button>
+                        </div>
+                    </div>
+
+                    <div class="perguntas" style="display: none;">
+                        <div class="alternativas">
+                            <label for="opcao5">14) Qual personagem é um(a) hacker profissional?</label>
+                            <div>
+                                <input id="dps5" type="radio" name="opcao5" value="20"/> Sombra
+                            </div>
+                            <div>
+                                <input id="tank5" type="radio" name="opcao5" value="10"/> Zarya
+                            </div>
+                            <div>
+                                <input id="sup5" type="radio" name="opcao5" value="1"/> Tracer
+                            </div>
+                            <div>
+                                <input id="indeciso4" type="radio" name="opcao4" value="1"/> Nenhuma das opções acima
+                            </div>
+                            <button>Próxima</button>
+                        </div>
+                    </div>
+
+                    <div class="perguntas" style="display: none;">
+                        <div class="alternativas">
+                            <label for="opcao5">15) Qual personagem teletransporta no tempo?</label>
+                            <div>
+                                <input id="dps5" type="radio" name="opcao5" value="20"/> Tracer
+                            </div>
+                            <div>
+                                <input id="tank5" type="radio" name="opcao5" value="10"/> Junkrat
+                            </div>
+                            <div>
+                                <input id="sup5" type="radio" name="opcao5" value="1"/> Baptiste
+                            </div>
+                            <div>
+                                <input id="indeciso4" type="radio" name="opcao4" value="1"/> Doomfist
+                            </div>
+                            <button>Próxima</button>
+                        </div>
+                    </div>
+
+                    <div class="perguntas" style="display: none;">
+                        <div class="alternativas">
+                            <label for="opcao5">16) Qual personagem de overwatch lhe deixa congelado?</label>
+                            <div>
+                                <input id="dps5" type="radio" name="opcao5" value="20"/> Mei
+                            </div>
+                            <div>
+                                <input id="tank5" type="radio" name="opcao5" value="10"/> Soujourn
+                            </div>
+                            <div>
+                                <input id="sup5" type="radio" name="opcao5" value="1"/> Rainha Junker
+                            </div>
+                            <div>
+                                <input id="indeciso4" type="radio" name="opcao4" value="1"/> Pharah
+                            </div>
+                            <button>Próxima</button>
+                        </div>
+                    </div>
+
+                    <div class="perguntas" style="display: none;">
+                        <div class="alternativas">
+                            <label for="opcao5">17) Quais personagens de Overwatch voam?</label>
+                            <div>
+                                <input id="dps5" type="radio" name="opcao5" value="20"/> Winston e Tracer
+                            </div>
+                            <div>
+                                <input id="tank5" type="radio" name="opcao5" value="10"/> Reaper e Widowmaker
+                            </div>
+                            <div>
+                                <input id="sup5" type="radio" name="opcao5" value="1"/>  Phara e Echo
+                            </div>
+                            <div>
+                                <input id="indeciso4" type="radio" name="opcao4" value="1"/> Symmetra e Sigma
+                            </div>
+                            <button>Próxima</button>
+                        </div>
+                    </div>
+
+                    <div class="perguntas" style="display: none;">
+                        <div class="alternativas">
+                            <label for="opcao5">18) Qual personagem se assemelha a uma bola?</label>
+                            <div>
+                                <input id="dps5" type="radio" name="opcao5" value="20"/> Hammond
+                            </div>
+                            <div>
+                                <input id="tank5" type="radio" name="opcao5" value="10"/> Roadhog
+                            </div>
+                            <div>
+                                <input id="sup5" type="radio" name="opcao5" value="1"/> DVA
+                            </div>
+                            <div>
+                                <input id="indeciso4" type="radio" name="opcao4" value="1"/> Bastion
+                            </div>
+                            <button>Próxima</button>
+                        </div>
+                    </div>
+
+                    <div class="perguntas" style="display: none;">
+                        <div class="alternativas">
+                            <label for="opcao5">19) Qual personagem é um engenheiro?</label>
+                            <div>
+                                <input id="dps5" type="radio" name="opcao5" value="20"/> Moira
+                            </div>
+                            <div>
+                                <input id="tank5" type="radio" name="opcao5" value="10"/> Tobjorn
+                            </div>
+                            <div>
+                                <input id="sup5" type="radio" name="opcao5" value="1"/> Reinhardt
+                            </div>
+                            <div>
+                                <input id="indeciso4" type="radio" name="opcao4" value="1"/> Doomfist
+                            </div>
+                            <button>Próxima</button>
+                        </div>
+                    </div>
+
+                    <div class="perguntas" style="display: none;">
+                        <div class="alternativas">
+                            <label for="opcao5">20) Quem fala "Ryūjin no ken wo kūrae!"</label>
+                            <div>
+                                <input id="dps5" type="radio" name="opcao5" value="20"/> Ashe
+                            </div>
+                            <div>
+                                <input id="tank5" type="radio" name="opcao5" value="10"/> Genji
+                            </div>
+                            <div>
+                                <input id="sup5" type="radio" name="opcao5" value="1"/> Cassidy
+                            </div>
+                            <div>
+                                <input id="indeciso4" type="radio" name="opcao4" value="1"/> Hanzo
+                            </div>
+                            <button>Próxima</button>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="footer">
+        <div class="container">
+            <span>&copy 2000 e Sempre -- Nathan David</span>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO
+
+    function mudar() {
+        img_classe.src = 'img/tanque.png'
+        tituloClasse.innerHTML = `Tanque`
+        descricaoClasse.innerHTML = `Os hérois com função de tanque resistem ao dano e destroem posiçoes fortificadas, como inimigos agrupados e pontos de obstrução. Quando você é um tanque, é você quem lidera a investida.`
+    }
+    function mudar2() {
+        img_classe.src = 'img/dano.png'
+        tituloClasse.innerHTML = `Dano`
+        descricaoClasse.innerHTML = `Heróis de dano são responsáveis por procurar, atacar e aniquilar inimigos, valendo-se de uma ampla variedade de ferramentas, habilidades e estratégias. Perigosos porém frágeis, esses heróis precisam de apoio para sobreviver.`
+    }
+    function mudar3() {
+        img_classe.src = 'img/suporte.png'
+        tituloClasse.innerHTML = `Suporte`
+        descricaoClasse.innerHTML = `Heróis de suporte fortalecem seus aliados, pois são capazes de curá-los, protegê-los com escudos, aumentar seu poder de dano e imobilizar os inimigos. Como suporte, você é fundamental para a sobrevivência da sua equipe.`
+    }
+</script>

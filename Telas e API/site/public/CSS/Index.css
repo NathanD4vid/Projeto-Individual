@@ -20,7 +20,7 @@ body {
 }
 
 .header {
-    background-color: #c0c4d1;
+    background-color: #d8d8fc;
     position: fixed;
     top: 2vh;
     z-index: 2;
@@ -129,7 +129,7 @@ body {
 
 .inicio {
     height: 70vh;
-    background-color: #d2dfef;
+    background: linear-gradient(45deg, #FAF7F0, #CDFCF6, #BCCEF8, #98A8F8);
     display: flex;
     justify-content: center;
 }
@@ -182,7 +182,7 @@ body {
 
 .classeJogo {
     height: 90vh;
-    background-color: #4b86ca;
+    background: linear-gradient(45deg, #6C4AB6, #8D72E1, #8D9EFF, #B9E0FF);
     display: flex;
     justify-content: center;
 }
@@ -291,7 +291,7 @@ body {
 
 .premios {
     height: 85vh;
-    background-color: #e5e7ea;
+    background: linear-gradient(45deg, #FAF7F0, #CDFCF6, #BCCEF8, #98A8F8);
     display: flex;
     justify-content: center;
 }
@@ -336,8 +336,9 @@ body {
 
 .footer {
     height: 7vh;
-    background-color: #c0c4d1;
+    background-color: #646477;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #FFFF;
 }

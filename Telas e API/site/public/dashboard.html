@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/dash.css">
+    <link REL="SHORTCUT ICON" HREF="img/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <div class="banner">
+        <div class="header">
+            <div class="container">
+                <div class="logos">
+                    <div class="blizzard">
+                        <img src="img/Blizzard-Logo.png" alt="">
+                    </div>
+                    <div class="over_logo">
+                        <img src="img/logo.png" alt="" class="logoOver">
+                        <img src="img/over2.png" alt="" class="escritaOver">
+                    </div>
+                    <div class="conteudos">
+                        <a href=""">Sobre</a> 
+                        <a href="">Dentro do jogo</a>
+                        <a href="">Prêmios</a>
+                    </div>  
+                </div>  
+                <ul>
+                    <h3><span id="b_usuario">usuário</span></h3>
+                    <li id="cadastroBotao"><a href="index.html">Sair</a></li>    
+                </ul>
+            </div>
+        </div>
+
+        <div class="premios">
+            <div class="grafico">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="footer">
+        <div class="container">
+            <span>&copy 2000 e Sempre -- Nathan David</span>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO
+
+    let labels = [
+        'Minero',
+        'Fernandes',
+        'Mega',
+        'Aspas',
+        'Brandao',
+        'Caramico',
+    ];
+
+    let data = {
+        labels: labels,
+        datasets: [{
+            label: 'Acertos',
+            backgroundColor: '#F06414',
+            borderColor: 'rgb(255, 255, 255)',
+            data: [5, 10, 20, 7, 8, 4],
+
+        }
+    ]
+    };
+
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {}
+    };
+
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+</script>

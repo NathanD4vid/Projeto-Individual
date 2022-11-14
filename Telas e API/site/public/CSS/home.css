@@ -14,7 +14,7 @@ body {
 }
 
 .header {
-    background-color: #c0c4d1;
+    background-color: #d8d8fc;
     position: fixed;
     top: 2vh;
     z-index: 2;
@@ -116,7 +116,7 @@ body {
 
 .inicio {
     height: 70vh;
-    background-color: #d2dfef;
+    background: linear-gradient(75deg, #FAF7F0, #afe0d9, #aac3fc, #8195f9);
     display: flex;
     justify-content: center;
 }
@@ -155,7 +155,7 @@ body {
 
 .classeJogo {
     height: 90vh;
-    background-color: #4b86ca;
+    background: linear-gradient(70deg, #B9E0FF, #8D9EFF, #8D72E1, #6C4AB6);
     display: flex;
     justify-content: center;
 }
@@ -164,16 +164,16 @@ body {
     height: 100%;
     width: 80%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .campeaoTexto{
-    width: 30%;
+    width: 35%;
 }
 
 .campeaoTexto .tabela{
     margin-top: 15vh;
-    height: 27vh;
+    height: 45vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -184,6 +184,11 @@ body {
     width: 100%;
     border-collapse: collapse;
     text-align: center;
+    height: 35vh;
+}
+
+.tabela table th {
+    background-color: #F06414;
 }
 
 .tabela table td, th{
@@ -223,22 +228,88 @@ body {
 
 .premios {
     height: 85vh;
-    background-color: #e5e7ea;
+    background: linear-gradient(45deg, #FAF7F0, #CDFCF6, #BCCEF8, #98A8F8);
     display: flex;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .premios .container {
-    height: 85vh;
+    margin-top: 2vh;
+    height: 63vh;
     width: 80vw;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.premios .container .alternativas{
+    height: 50vh;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.premios .container .alternativas label{
+    font-size: 1.7rem;
+}
+
+.premios .container .alternativas div{
+    display: flex;
+    align-items: center;
+}
+
+
+.premios .container .alternativas input{
+    margin: 0;
+    margin-right: 0.3vw;
+}
+
+.premios .container .alternativas button{
+    margin-top: 1vh;
+    background-color: #F06414;
+    border-radius: 1vh;
+    height: 5vh;
+    width: 7vw;
+    color: #FFFF;
+    align-self: center;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.premios .container .alternativas button:hover{
+    cursor: pointer;
+    background-color: #d9956d;
+    color: #FFFF;
+}
+
+#parabens .salve{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 50vh;
+    margin: 0;
+}
+
+#nome_classes {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#img_classes {
+    width: 50%;
 }
 
 .footer {
     height: 7vh;
-    background-color: #c0c4d1;
+    background-color: #646477;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #FFFF;
 }

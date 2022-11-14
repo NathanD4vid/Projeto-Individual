@@ -55,7 +55,7 @@
                     <table>
                         <tr>
                             <th>Temporada</th>
-                            <th>Time vencedor</th>
+                            <th id="champs">Time vencedor</th>
                             <th>Pontuação</th>
                             <th>Time perdedor</th>
                         </tr>
@@ -109,7 +109,110 @@
 
     <div class="premios">
         <div class="container">
-            
+            <div class="tituloQuestionario">
+                <h3 id="titulinho">Nunca jogou Overwatch? Descubra uma classe para começar!</h3>
+            </div>
+            <div classe="questionario">
+                <div class="perguntas1">
+                    <div class="alternativas">
+                        <label for="opcao">1) Qual a sua experiência com jogos FPS?</label>
+                        <div>
+                            <input id="dps" type="radio" name="opcao" value="a"/> 3 Anos ou mais
+                        </div>
+                        <div>
+                            <input id="tank" type="radio" name="opcao" value="b"/> 1 Anos ou mais
+                        </div>
+                        <div>
+                            <input id="sup" type="radio" name="opcao" value="c"/> Menos de 1 ano
+                        </div>
+                        <div>
+                            <input id="indeciso" type="radio" name="opcao" value="d"/> Nenhuma experiência
+                        </div>
+                        <button onclick="registrar()">Próxima</button>
+                    </div>
+                </div>
+
+                <div class="perguntas2" style="display: none;">
+                    <div class="alternativas">
+                        <label for="opcao2">2) Qual seu estilo de gameplay?</label>
+                        <div>
+                            <input id="dps2" type="radio" name="opcao2" value="a"/> Agressivo 
+                        </div>
+                        <div>
+                            <input id="tank2" type="radio" name="opcao2" value="b"/> Meio a Meio
+                        </div>
+                        <div>
+                            <input id="sup2" type="radio" name="opcao2" value="c"/> Passivo
+                        </div>
+                        <div>
+                            <input id="indeciso2" type="radio" name="opcao2" value="d"/> Não faço ideia
+                        </div>
+                        <button onclick="registrar2()">Próxima</button>
+                    </div>
+                </div>
+
+                <div class="perguntas3" style="display: none;">
+                    <div class="alternativas">
+                        <label for="opcao3">3) Qual tipo de jogo abaixo você prefere?</label>
+                        <div>
+                            <input id="dps3" type="radio" name="opcao3" value="a"/> FPS
+                        </div>
+                        <div>
+                            <input id="tank3" type="radio" name="opcao3" value="b"/> RPG
+                        </div>
+                        <div>
+                            <input id="sup3" type="radio" name="opcao3" value="c"/> História/Aventura
+                        </div>
+                        <div>
+                            <input id="indeciso3" type="radio" name="opcao3" value="d"/> Não sei
+                        </div>
+                        <button onclick="registrar3()">Próxima</button>
+                    </div>
+                </div>
+
+                <div class="perguntas4" style="display: none;">
+                    <div class="alternativas">
+                        <label for="opcao4">4) Qual tipo de mobilidade você prefere?</label>
+                        <div>
+                            <input id="dps4" type="radio" name="opcao4"  value="a"/> Rápida
+                        </div>
+                        <div>
+                            <input id="tank4" type="radio" name="opcao4" value="b"/> Balanceada
+                        </div>
+                        <div>
+                            <input id="sup4" type="radio" name="opcao4" value="c"/> Calma
+                        </div>
+                        <div>
+                            <input id="indeciso4" type="radio" name="opcao4" value="d"/> Não sei ao certo
+                        </div>
+                        <button onclick="registrar4()">Próxima</button>
+                    </div>
+                </div>
+
+                <div class="perguntas5" style="display: none;">
+                    <div class="alternativas">
+                        <label for="opcao5">5) Você é uma pessoa</label>
+                        <div>
+                            <input id="dps5" type="radio" name="opcao5" value="a"/> Sem paciência
+                        </div>
+                        <div>
+                            <input id="tank5" type="radio" name="opcao5" value="b"/> Balanceada
+                        </div>
+                        <div>
+                            <input id="sup5" type="radio" name="opcao5" value="c"/> Paciente
+                        </div>
+                        <button onclick="registrar5()">Próxima</button>
+                    </div>
+                </div>
+
+                <div id="parabens" style="display: none;">
+                    <div class="salve">
+                            <p id="nome_classes"></p>
+                            <img id="img_classes" src="" alt="">
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
         
@@ -118,26 +221,118 @@
             <span>&copy 2000 e Sempre -- Nathan David</span>
         </div>
     </div>
-    </div>
 </body>
-</html>
 
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO
+    var index = 1
+
+    var dps = 0
+    var tank = 0
+    var cura = 0
+    var indeciso = 0
+
+    function registrar() {
+       var resposta = document.querySelector('input[name="opcao"]:checked').value
+       if (resposta == 'a') {
+            dps++
+       } else if (resposta == 'b') {
+            tank++
+       } else if (resposta == 'c') {
+            cura++
+       } else {
+            indeciso++
+       }
+
+       mudar()
+    }
+
+    function registrar2() {
+       var resposta2 = document.querySelector('input[name="opcao2"]:checked').value
+       if (resposta2 == 'a') {
+            dps++
+       } else if (resposta2 == 'b') {
+            tank++
+       } else if (resposta2 == 'c') {
+            cura++
+       } else {
+            indeciso++
+       }
+       mudar()
+    }
+
+    function registrar3() {
+       var resposta3 = document.querySelector('input[name="opcao3"]:checked').value
+       if (resposta3 == 'a') {
+            dps++
+       } else if (resposta3 == 'b') {
+            tank++
+       } else if (resposta3 == 'c') {
+            cura++
+       } else {
+            indeciso++
+       }
+       mudar()
+    }
+
+    function registrar4() {
+       var resposta4 = document.querySelector('input[name="opcao4"]:checked').value
+       if (resposta4 == 'a') {
+            dps++
+       } else if (resposta4 == 'b') {
+            tank++
+       } else if (resposta4 == 'c') {
+            cura++
+       } else {
+            indeciso++
+       }
+       mudar()
+    }
+
+    function registrar5() {
+       var resposta5 = document.querySelector('input[name="opcao5"]:checked').value
+       if (resposta5 == 'a') {
+            dps++
+       } else if (resposta5 == 'b') {
+            tank++
+       } else if (resposta5 == 'c') {
+            cura++
+       } else {
+            indeciso++
+       }
+       mudar()
+    }
 
     function mudar() {
-        img_classe.src = 'img/tanque.png'
-        tituloClasse.innerHTML = `Tanque`
-        descricaoClasse.innerHTML = `Os hérois com função de tanque resistem ao dano e destroem posiçoes fortificadas, como inimigos agrupados e pontos de obstrução. Quando você é um tanque, é você quem lidera a investida.`
-    }
-    function mudar2() {
-        img_classe.src = 'img/dano.png'
-        tituloClasse.innerHTML = `Dano`
-        descricaoClasse.innerHTML = `Heróis de dano são responsáveis por procurar, atacar e aniquilar inimigos, valendo-se de uma ampla variedade de ferramentas, habilidades e estratégias. Perigosos porém frágeis, esses heróis precisam de apoio para sobreviver.`
-    }
-    function mudar3() {
-        img_classe.src = 'img/suporte.png'
-        tituloClasse.innerHTML = `Suporte`
-        descricaoClasse.innerHTML = `Heróis de suporte fortalecem seus aliados, pois são capazes de curá-los, protegê-los com escudos, aumentar seu poder de dano e imobilizar os inimigos. Como suporte, você é fundamental para a sobrevivência da sua equipe.`
+        for (;index <= 5;) {
+            var question = document.querySelector(`.perguntas${index}`) 
+            question.style.display = "none";
+            break
+        }
+
+        index++
+        if (index <= 5) {
+            document.querySelector(`.perguntas${index}`).style.display = "block";
+        } else {
+            titulinho.innerHTML = `De acordo com sua experiencia recomendamos para você:`
+            document.querySelector(`#parabens`).style.display = "block";
+
+            if (dps > (tank && cura && indeciso)) {
+                nome_classes.innerHTML = `DANO`
+                img_classes.src = 'img/danos.png'
+            } else if (tank > (dps && cura && indeciso)) {
+                nome_classes.innerHTML = `TANQUE`
+                img_classes.src = 'img/tanks.png'
+            } else if (cura > (dps && tank && indeciso)) {
+                nome_classes.innerHTML = `SUPORTE`
+                img_classes.src = 'img/curas.png'
+            } else if (indeciso > (dps && tank && cura)) {
+                nome_classes.innerHTML = `SUPORTE`
+                img_classes.src = 'img/curas.png'
+            }
+        }
     }
 </script>
+
+</html>
+
