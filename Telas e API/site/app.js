@@ -15,6 +15,7 @@ var medidasRouter = require("./src/routes/medidas");
 var quizRouter = require("./src/routes/quiz");
 var desafioRouter = require("./src/routes/desafio");
 var atualizarRouter = require("./src/routes/atualizar");
+var dashRouter = require("./src/routes/dash");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -29,6 +30,7 @@ app.use("/medidas", medidasRouter);
 app.use("/quiz", quizRouter);
 app.use("/desafio", desafioRouter);
 app.use("/atualizar", atualizarRouter);
+app.use("/dash", dashRouter);
 
 app.listen(PORTA, function () {
     console.log(`Servidor do seu site já está rodando! Acesse o caminho a seguir para visualizar: http://localhost:${PORTA} \n

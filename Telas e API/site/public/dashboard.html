@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Dashboard</title>
 </head>
+
 <body>
 
     <div class="banner">
@@ -25,11 +27,11 @@
                     <div class="conteudos">
                         <a href="home.html">Home</a>
                         <a href="questionario.html">Desafio</a>
-                    </div>  
-                </div>  
+                    </div>
+                </div>
                 <ul>
                     <h3><span id="b_usuario">usuário</span></h3>
-                    <li id="cadastroBotao"><a href="index.html">Sair</a></li>    
+                    <li id="cadastroBotao"><a href="index.html">Sair</a></li>
                 </ul>
             </div>
         </div>
@@ -41,37 +43,28 @@
         </div>
     </div>
 
-    
     <div class="footer">
         <div class="container">
             <span>&copy 2000 e Sempre -- Nathan David</span>
         </div>
     </div>
 </body>
+
 </html>
 
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO
 
-    let labels = [
-        'Minero',
-        'Fernandes',
-        'Mega',
-        'Yan',
-        'Brandao',
-        'Caramico',
-    ];
-
     let data = {
-        labels: labels,
+        labels: [],
         datasets: [{
             label: 'Acertos',
             backgroundColor: '#F06414',
             borderColor: 'rgb(255, 255, 255)',
-            data: [5, 10, 20, 7, 8, 4],
+            data: [],
 
         }
-    ]
+        ]
     };
 
     const config = {
@@ -80,8 +73,37 @@
         options: {}
     };
 
-    const myChart = new Chart(
-        document.getElementById('myChart'),
-        config
-    );
+    
+
+
+    atualizarGrafico()
+
+    function atualizarGrafico() {
+        
+        fetch("/dash/listar").then(function (resposta) {
+            if (resposta.ok) {
+
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                    for (let index = 0; index < resposta.length; index++) {
+                        const elemento = resposta[index]
+                        data.labels.push(elemento.username)
+                        data.datasets[0].data.push(elemento.acertos)
+                    }
+
+                    const myChart = new Chart(
+                        document.getElementById('myChart'),
+                        config
+                    );
+
+                });
+            } else {
+                throw ('Houve um erro na API!');
+            }
+        }).catch(function (resposta) {
+            console.error(resposta);
+
+        });
+    }
 </script>
