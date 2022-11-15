@@ -22,9 +22,8 @@
                         <img src="img/over2.png" alt="" class="escritaOver">
                     </div>
                     <div class="conteudos">
-                        <a href=""">Sobre</a> 
-                        <a href="">Dentro do jogo</a>
-                        <a href="">Prêmios</a>
+                        <a href="questionario.html">Desafio</a>
+                        <a href="dashboard.html">Dashboard</a>
                     </div>  
                 </div>  
                 <ul>
@@ -113,6 +112,15 @@
                 <h3 id="titulinho">Nunca jogou Overwatch? Descubra uma classe para começar!</h3>
             </div>
             <div classe="questionario">
+
+                <div class="quizHabilitar" style="display: none;">
+                    <div class="quizMensagem">
+                        <p>Esse quiz só pode ser realizado uma vez</p>
+                        <p>Espero de coração que você tenha gostado de Overwatch</p>
+                        <p>Ass: Nathan "Mega" David.</p>
+                    </div>
+                </div>
+
                 <div class="perguntas1">
                     <div class="alternativas">
                         <label for="opcao">1) Qual a sua experiência com jogos FPS?</label>
@@ -224,13 +232,21 @@
 </body>
 
 <script>
-    b_usuario.innerHTML = sessionStorage.NOME_USUARIO
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    
     var index = 1
 
     var dps = 0
     var tank = 0
     var cura = 0
     var indeciso = 0
+
+    var habilitarQuiz = sessionStorage.QUIZ_USUARIO
+    
+    if (habilitarQuiz != "false") {
+        document.querySelector(`.perguntas1`).style.display = "none";
+        document.querySelector(`.quizHabilitar`).style.display = "block";
+    }
 
     function registrar() {
        var resposta = document.querySelector('input[name="opcao"]:checked').value
@@ -303,11 +319,13 @@
        mudar()
     }
 
+    var classe = 0;
+
     function mudar() {
         for (;index <= 5;) {
-            var question = document.querySelector(`.perguntas${index}`) 
+            var question = document.querySelector(`.perguntas${index}`) ;
             question.style.display = "none";
-            break
+            break;
         }
 
         index++
@@ -318,19 +336,106 @@
             document.querySelector(`#parabens`).style.display = "block";
 
             if (dps > (tank && cura && indeciso)) {
-                nome_classes.innerHTML = `DANO`
-                img_classes.src = 'img/danos.png'
+                nome_classes.innerHTML = `DANO`;
+                img_classes.src = 'img/danos.png';
+                classe = `dano`;
+                cadastrarClasse()
             } else if (tank > (dps && cura && indeciso)) {
-                nome_classes.innerHTML = `TANQUE`
-                img_classes.src = 'img/tanks.png'
+                nome_classes.innerHTML = `TANQUE`;
+                img_classes.src = 'img/tanks.png';
+                classe = `tanque`;
+                cadastrarClasse()
             } else if (cura > (dps && tank && indeciso)) {
-                nome_classes.innerHTML = `SUPORTE`
-                img_classes.src = 'img/curas.png'
+                nome_classes.innerHTML = `SUPORTE`;
+                img_classes.src = 'img/curas.png';
+                classe = `suporte`;
+                cadastrarClasse()
             } else if (indeciso > (dps && tank && cura)) {
-                nome_classes.innerHTML = `SUPORTE`
-                img_classes.src = 'img/curas.png'
+                nome_classes.innerHTML = `SUPORTE`;
+                img_classes.src = 'img/curas.png';
+                classe = `suporte`;
+                cadastrarClasse()
             }
         }
+    }
+
+    function cadastrarClasse() {
+        sessionStorage.QUIZ_USUARIO = "true"
+        // aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var classeVar = classe;
+        var idVar = sessionStorage.ID_USUARIO;
+
+        if (classeVar == "" || idVar == "") {
+            alert("Erro no questionario");
+
+            return false;
+        }
+
+        // Enviando o valor da nova input
+        fetch("/quiz/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                classeServer: classeVar,
+                idServer: idVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                atualizarUsuario()
+
+            } else {
+                throw ("Houve um erro ao tentar enviar ao banco");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+        return false;
+    }
+
+    function atualizarUsuario() {
+        var idVar2 = sessionStorage.ID_USUARIO;
+
+        if (idVar2 == "") {
+            alert("Erro no questionario");
+
+            return false;
+        }
+
+        // Enviando o valor da nova input
+        fetch("/atualizar/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                idServer2: idVar2
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                atualizarUsuario()
+
+            } else {
+                throw ("Houve um erro ao tentar enviar ao banco");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+        return false;
     }
 </script>
 

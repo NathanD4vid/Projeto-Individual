@@ -96,7 +96,7 @@ body {
     font-size: 1rem;
 }
 
-.header li a {
+.header a {
     text-decoration: none;
     color: black;
 }
@@ -173,6 +173,25 @@ body {
     cursor: pointer;
     background-color: #d9956d;
     color: #FFFF;
+}
+
+#parabens {
+    display: flex;
+    align-items: flex-start;
+    height: 50vh;
+}
+
+#parabens .salve{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 15vh;
+    margin: 0;
+}
+
+#acertosTotal {
+    font-size: 3rem;
 }
 
 .footer {

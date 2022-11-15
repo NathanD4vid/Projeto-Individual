@@ -96,7 +96,7 @@ body {
     font-size: 1rem;
 }
 
-.header li a {
+.header a {
     text-decoration: none;
     color: black;
 }
@@ -303,6 +303,16 @@ body {
 
 #img_classes {
     width: 50%;
+}
+
+.quizHabilitar {
+    margin-bottom: 10vh;
+    height: 25vh;
+}
+
+.quizMensagem {
+    text-align: center;
+    font-size: 2rem;
 }
 
 .footer {
