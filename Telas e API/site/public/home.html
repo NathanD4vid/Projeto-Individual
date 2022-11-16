@@ -231,6 +231,8 @@
     </div>
 </body>
 
+</html>
+
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     
@@ -427,7 +429,7 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                atualizarUsuario()
+                alert('Agora foi')
 
             } else {
                 throw ("Houve um erro ao tentar enviar ao banco");
@@ -438,6 +440,3 @@
         return false;
     }
 </script>
-
-</html>
-
