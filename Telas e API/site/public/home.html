@@ -125,16 +125,16 @@
                     <div class="alternativas">
                         <label for="opcao">1) Qual a sua experiência com jogos FPS?</label>
                         <div>
-                            <input id="dps" type="radio" name="opcao" value="a"/> 3 Anos ou mais
+                            <input id="dps" type="radio" name="opcao1" value="a"/> 3 Anos ou mais
                         </div>
                         <div>
-                            <input id="tank" type="radio" name="opcao" value="b"/> 1 Anos ou mais
+                            <input id="tank" type="radio" name="opcao1" value="b"/> 1 Anos ou mais
                         </div>
                         <div>
-                            <input id="sup" type="radio" name="opcao" value="c"/> Menos de 1 ano
+                            <input id="sup" type="radio" name="opcao1" value="c"/> Menos de 1 ano
                         </div>
                         <div>
-                            <input id="indeciso" type="radio" name="opcao" value="d"/> Nenhuma experiência
+                            <input id="indeciso" type="radio" name="opcao1" value="d"/> Nenhuma experiência
                         </div>
                         <button onclick="registrar()">Próxima</button>
                     </div>
@@ -155,7 +155,7 @@
                         <div>
                             <input id="indeciso2" type="radio" name="opcao2" value="d"/> Não faço ideia
                         </div>
-                        <button onclick="registrar2()">Próxima</button>
+                        <button onclick="registrar()">Próxima</button>
                     </div>
                 </div>
 
@@ -174,7 +174,7 @@
                         <div>
                             <input id="indeciso3" type="radio" name="opcao3" value="d"/> Não sei
                         </div>
-                        <button onclick="registrar3()">Próxima</button>
+                        <button onclick="registrar()">Próxima</button>
                     </div>
                 </div>
 
@@ -193,7 +193,7 @@
                         <div>
                             <input id="indeciso4" type="radio" name="opcao4" value="d"/> Não sei ao certo
                         </div>
-                        <button onclick="registrar4()">Próxima</button>
+                        <button onclick="registrar()">Próxima</button>
                     </div>
                 </div>
 
@@ -209,7 +209,7 @@
                         <div>
                             <input id="sup5" type="radio" name="opcao5" value="c"/> Paciente
                         </div>
-                        <button onclick="registrar5()">Próxima</button>
+                        <button onclick="registrar()">Próxima</button>
                     </div>
                 </div>
 
@@ -249,78 +249,30 @@
         document.querySelector(`.perguntas1`).style.display = "none";
         document.querySelector(`.quizHabilitar`).style.display = "block";
     }
+    
+    var i = 1
 
     function registrar() {
-       var resposta = document.querySelector('input[name="opcao"]:checked').value
-       if (resposta == 'a') {
-            dps++
-       } else if (resposta == 'b') {
-            tank++
-       } else if (resposta == 'c') {
-            cura++
-       } else {
-            indeciso++
-       }
+        for (; i <= 5; i++) {
+            var resposta = document.querySelector(`input[name="opcao${i}"]:checked`).value
 
-       mudar()
+            if (resposta == 'a') {
+                dps++
+            } else if (resposta == 'b') {
+                tank++
+            } else if (resposta == 'c') {
+                cura++
+            } else {
+                indeciso++
+            }
+
+            mudar()
+            break
+        }
+        i++
     }
-
-    function registrar2() {
-       var resposta2 = document.querySelector('input[name="opcao2"]:checked').value
-       if (resposta2 == 'a') {
-            dps++
-       } else if (resposta2 == 'b') {
-            tank++
-       } else if (resposta2 == 'c') {
-            cura++
-       } else {
-            indeciso++
-       }
-       mudar()
-    }
-
-    function registrar3() {
-       var resposta3 = document.querySelector('input[name="opcao3"]:checked').value
-       if (resposta3 == 'a') {
-            dps++
-       } else if (resposta3 == 'b') {
-            tank++
-       } else if (resposta3 == 'c') {
-            cura++
-       } else {
-            indeciso++
-       }
-       mudar()
-    }
-
-    function registrar4() {
-       var resposta4 = document.querySelector('input[name="opcao4"]:checked').value
-       if (resposta4 == 'a') {
-            dps++
-       } else if (resposta4 == 'b') {
-            tank++
-       } else if (resposta4 == 'c') {
-            cura++
-       } else {
-            indeciso++
-       }
-       mudar()
-    }
-
-    function registrar5() {
-       var resposta5 = document.querySelector('input[name="opcao5"]:checked').value
-       if (resposta5 == 'a') {
-            dps++
-       } else if (resposta5 == 'b') {
-            tank++
-       } else if (resposta5 == 'c') {
-            cura++
-       } else {
-            indeciso++
-       }
-       mudar()
-    }
-
+    
+   
     var classe = 0;
 
     function mudar() {
@@ -337,22 +289,37 @@
             titulinho.innerHTML = `De acordo com sua experiencia recomendamos para você:`
             document.querySelector(`#parabens`).style.display = "block";
 
-            if (dps > (tank && cura && indeciso)) {
+            if (dps >= 3) {
                 nome_classes.innerHTML = `DANO`;
                 img_classes.src = 'img/danos.png';
                 classe = `dano`;
                 cadastrarClasse()
-            } else if (tank > (dps && cura && indeciso)) {
+            } else if (tank >= 3) {
                 nome_classes.innerHTML = `TANQUE`;
                 img_classes.src = 'img/tanks.png';
                 classe = `tanque`;
                 cadastrarClasse()
-            } else if (cura > (dps && tank && indeciso)) {
+            } else if (cura >= 3) {
                 nome_classes.innerHTML = `SUPORTE`;
                 img_classes.src = 'img/curas.png';
                 classe = `suporte`;
                 cadastrarClasse()
-            } else if (indeciso > (dps && tank && cura)) {
+            } else if (indeciso >= 3) {
+                nome_classes.innerHTML = `SUPORTE`;
+                img_classes.src = 'img/curas.png';
+                classe = `suporte`;
+                cadastrarClasse()
+            } else if ( dps == tank ) {
+                nome_classes.innerHTML = `TANQUE`;
+                img_classes.src = 'img/tanks.png';
+                classe = `tanque`;
+                cadastrarClasse()
+            } else if (dps == cura) {
+                nome_classes.innerHTML = `SUPORTE`;
+                img_classes.src = 'img/curas.png';
+                classe = `suporte`;
+                cadastrarClasse()
+            } else if (tank == cura) {
                 nome_classes.innerHTML = `SUPORTE`;
                 img_classes.src = 'img/curas.png';
                 classe = `suporte`;
@@ -363,10 +330,7 @@
 
     function cadastrarClasse() {
         sessionStorage.QUIZ_USUARIO = "true"
-        // aguardar();
 
-        //Recupere o valor da nova input pelo nome do id
-        // Agora vá para o método fetch logo abaixo
         var classeVar = classe;
         var idVar = sessionStorage.ID_USUARIO;
 
@@ -376,15 +340,13 @@
             return false;
         }
 
-        // Enviando o valor da nova input
         fetch("/quiz/cadastrar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
+
                 classeServer: classeVar,
                 idServer: idVar
             })
@@ -413,15 +375,13 @@
             return false;
         }
 
-        // Enviando o valor da nova input
         fetch("/atualizar/cadastrar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
+    
                 idServer2: idVar2
             })
         }).then(function (resposta) {

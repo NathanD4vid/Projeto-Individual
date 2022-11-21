@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link REL="SHORTCUT ICON" HREF="img/favicon.ico">
     <title>Questionário</title>
 </head>
+
 <body>
 
     <div class="banner">
@@ -23,12 +25,12 @@
                     </div>
                     <div class="conteudos">
                         <a href="home.html">Home</a>
-                        <a href="questionario.html">Desafio</a>
-                    </div>  
-                </div>  
+                        <a href="dashboard.html">Dashboard</a>
+                    </div>
+                </div>
                 <ul>
                     <h3><span id="b_usuario">usuário</span></h3>
-                    <li id="cadastroBotao"><a href="index.html">Sair</a></li>    
+                    <li id="cadastroBotao"><a href="index.html">Sair</a></li>
                 </ul>
             </div>
         </div>
@@ -40,97 +42,97 @@
                 </div>
 
                 <div class="questionario">
-                   
+
                     <div class="pergunta1" style="display: block;">
                         <div class="alternativas">
                             <label for="opcao">1) Qual o personagem de nacionalidade brasileria de Overwatch?</label>
                             <div>
-                                <input type="radio" name="opcao1" value="0"/> Soldado 76
+                                <input type="radio" name="opcao1" value="0" /> Soldado 76
                             </div>
                             <div>
-                                <input type="radio" name="opcao1" value="1"/> Lucio
+                                <input type="radio" name="opcao1" value="correta" /> Lucio
                             </div>
                             <div>
-                                <input type="radio" name="opcao1" value="0"/> Winston
+                                <input type="radio" name="opcao1" value="0" /> Winston
                             </div>
                             <div>
-                                <input type="radio" name="opcao1" value="0"/> Ana
+                                <input type="radio" name="opcao1" value="0" /> Ana
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>
                     </div>
-    
+
                     <div class="pergunta2" style="display: none;">
                         <div class="alternativas">
                             <label for="opcao2">2) Qual mapa se passa no Brasil?</label>
                             <div>
-                                <input type="radio" name="opcao2" value="0"/>  Rota 66
+                                <input type="radio" name="opcao2" value="0" /> Rota 66
                             </div>
                             <div>
-                                <input type="radio" name="opcao2" value="0"/> Busan
+                                <input type="radio" name="opcao2" value="0" /> Busan
                             </div>
                             <div>
-                                <input type="radio" name="opcao2" value="1"/> Paraíso
+                                <input type="radio" name="opcao2" value="correta" /> Paraíso
                             </div>
                             <div>
-                                <input type="radio" name="opcao2" value="0"/> Kings Row
+                                <input type="radio" name="opcao2" value="0" /> Kings Row
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>
                     </div>
-    
+
                     <div class="pergunta3" style="display: none;">
                         <div class="alternativas">
                             <label for="opcao3">3) Qual personagem é irmão do Genji?</label>
                             <div>
-                                <input type="radio" name="opcao3" value="1"/> Hanzo
+                                <input type="radio" name="opcao3" value="correta" /> Hanzo
                             </div>
                             <div>
-                                <input type="radio" name="opcao3" value="0"/> Bastion
+                                <input type="radio" name="opcao3" value="0" /> Bastion
                             </div>
                             <div>
-                                <input type="radio" name="opcao3" value="0"/> Orisa
+                                <input type="radio" name="opcao3" value="0" /> Orisa
                             </div>
                             <div>
-                                <input type="radio" name="opcao3" value="0"/> Moira
+                                <input type="radio" name="opcao3" value="0" /> Moira
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>
                     </div>
-    
+
                     <div class="pergunta4" style="display: none;">
                         <div class="alternativas">
                             <label for="opcao4">4) Quando overwatch ganhou o Game Of The Year?</label>
                             <div>
-                                <input type="radio" name="opcao4"  value="0"/> 2020
+                                <input type="radio" name="opcao4" value="0" /> 2020
                             </div>
                             <div>
-                                <input type="radio" name="opcao4" value="0"/> 2018
+                                <input type="radio" name="opcao4" value="0" /> 2018
                             </div>
                             <div>
-                                <input type="radio" name="opcao4" value="1"/> 2016
+                                <input type="radio" name="opcao4" value="correta" /> 2016
                             </div>
                             <div>
-                                <input type="radio" name="opcao4" value="0"/> Nunca ganhou
+                                <input type="radio" name="opcao4" value="0" /> Nunca ganhou
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>
                     </div>
-    
+
                     <div class="pergunta5" style="display: none;">
                         <div class="alternativas">
                             <label for="opcao5">5) Qual a organização inimiga da Overwatch?</label>
                             <div>
-                                <input type="radio" name="opcao5" value="1"/> Talon
+                                <input type="radio" name="opcao5" value="correta" /> Talon
                             </div>
                             <div>
-                                <input type="radio" name="opcao5" value="0"/> Blackwatch
+                                <input type="radio" name="opcao5" value="0" /> Blackwatch
                             </div>
                             <div>
-                                <input type="radio" name="opcao5" value="0"/> Gangue Deadlock
+                                <input type="radio" name="opcao5" value="0" /> Gangue Deadlock
                             </div>
                             <div>
-                                <input type="radio" name="opcao5" value="0"/> Clã Shimada
+                                <input type="radio" name="opcao5" value="0" /> Clã Shimada
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>
@@ -140,16 +142,16 @@
                         <div class="alternativas">
                             <label for="opcao5">6) O que a d.va fala depois que ela utiliza sua ultimate?</label>
                             <div>
-                                <input type="radio" name="opcao6" value="0"/> "La vaiii"
+                                <input type="radio" name="opcao6" value="0" /> "La vaiii"
                             </div>
                             <div>
-                                <input type="radio" name="opcao6" value="1"/> "Pede pra nerfar noob"
+                                <input type="radio" name="opcao6" value="correta" /> "Pede pra nerfar noob"
                             </div>
                             <div>
-                                <input type="radio" name="opcao6" value="0"/> "Desculpe"
+                                <input type="radio" name="opcao6" value="0" /> "Desculpe"
                             </div>
                             <div>
-                                <input type="radio" name="opcao6" value="0"/> "Nathan Muito Gato"
+                                <input type="radio" name="opcao6" value="0" /> "Nathan Muito Gato"
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>
@@ -159,16 +161,16 @@
                         <div class="alternativas">
                             <label for="opcao5">7) Qual evento levou a criação da Overwatch?</label>
                             <div>
-                                <input type="radio" name="opcao7" value="0"/> Ataque Alienigêna
+                                <input type="radio" name="opcao7" value="0" /> Ataque Alienigêna
                             </div>
                             <div>
-                                <input type="radio" name="opcao7" value="0"/> Aquecimento Global
+                                <input type="radio" name="opcao7" value="0" /> Aquecimento Global
                             </div>
                             <div>
-                                <input type="radio" name="opcao7" value="0"/> Ataque do Thanos
+                                <input type="radio" name="opcao7" value="0" /> Ataque do Thanos
                             </div>
                             <div>
-                                <input type="radio" name="opcao7" value="1"/> A Crise Ôminica
+                                <input type="radio" name="opcao7" value="correta" /> A Crise Ôminica
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>
@@ -176,18 +178,19 @@
 
                     <div class="pergunta8" style="display: none;">
                         <div class="alternativas">
-                            <label for="opcao5">8) Qual personagem tem uma ultimate que te deixa preso em um buraco negro?</label>
+                            <label for="opcao5">8) Qual personagem tem uma ultimate que te deixa preso em um buraco
+                                negro?</label>
                             <div>
-                                <input type="radio" name="opcao8" value="1"/> Zarya
+                                <input type="radio" name="opcao8" value="correta" /> Zarya
                             </div>
                             <div>
-                                <input type="radio" name="opcao8" value="0"/> Sigma
+                                <input type="radio" name="opcao8" value="0" /> Sigma
                             </div>
                             <div>
-                                <input type="radio" name="opcao8" value="0"/> Orisa
+                                <input type="radio" name="opcao8" value="0" /> Orisa
                             </div>
                             <div>
-                                <input type="radio" name="opcao8" value="0"/> RoadHog
+                                <input type="radio" name="opcao8" value="0" /> RoadHog
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>
@@ -197,16 +200,16 @@
                         <div class="alternativas">
                             <label for="opcao5">9) Qual o melhor genji do mundo?</label>
                             <div>
-                                <input type="radio" name="opcao9" value="0"/> Nitro
+                                <input type="radio" name="opcao9" value="0" /> Nitro
                             </div>
                             <div>
-                                <input  type="radio" name="opcao9" value="0"/> Megathan10
+                                <input type="radio" name="opcao9" value="0" /> Megathan10
                             </div>
                             <div>
-                                <input type="radio" name="opcao9" value="1"/> Yan
+                                <input type="radio" name="opcao9" value="correta" /> Yan
                             </div>
                             <div>
-                                <input type="radio" name="opcao9" value="0"/> Yohan
+                                <input type="radio" name="opcao9" value="0" /> Yohan
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>
@@ -216,16 +219,16 @@
                         <div class="alternativas">
                             <label for="opcao5">10) Qual o elo máximo do Overwatch</label>
                             <div>
-                                <input type="radio" name="opcao10" value="1"/> Top 500
+                                <input type="radio" name="opcao10" value="correta" /> Top 500
                             </div>
                             <div>
-                                <input type="radio" name="opcao10" value="0"/> Global
+                                <input type="radio" name="opcao10" value="0" /> Global
                             </div>
                             <div>
-                                <input type="radio" name="opcao10" value="0"/> Grão-Mestre
+                                <input type="radio" name="opcao10" value="0" /> Grão-Mestre
                             </div>
                             <div>
-                                <input type="radio" name="opcao10" value="0"/> Radiante
+                                <input type="radio" name="opcao10" value="0" /> Radiante
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>
@@ -235,16 +238,16 @@
                         <div class="alternativas">
                             <label for="opcao5">11) Qual o elo mínimo em Overwatch?</label>
                             <div>
-                                <input type="radio" name="opcao11" value="1"/> Bronze  
+                                <input type="radio" name="opcao11" value="correta" /> Bronze
                             </div>
                             <div>
-                                <input  type="radio" name="opcao11" value="0"/> Latão 
+                                <input type="radio" name="opcao11" value="0" /> Latão
                             </div>
                             <div>
-                                <input type="radio" name="opcao11" value="0"/> Ferro 
+                                <input type="radio" name="opcao11" value="0" /> Ferro
                             </div>
                             <div>
-                                <input type="radio" name="opcao11" value="0"/> Lama 
+                                <input type="radio" name="opcao11" value="0" /> Lama
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>
@@ -254,16 +257,20 @@
                         <div class="alternativas">
                             <label for="opcao5">12) Quais são os tipos de mapa disponíveis na rankeada?</label>
                             <div>
-                                <input type="radio" name="opcao12" value="1"/> Híbrido, Escolta, Controle e Avanço
+                                <input type="radio" name="opcao12" value="correta" /> Híbrido, Escolta, Controle e
+                                Avanço
                             </div>
                             <div>
-                                <input  type="radio" name="opcao12" value="0"/> Híbrido, Escolta, Avanço e Pegue a Bandeira
+                                <input type="radio" name="opcao12" value="0" /> Híbrido, Escolta, Avanço e Pegue a
+                                Bandeira
                             </div>
                             <div>
-                                <input type="radio" name="opcao12" value="0"/> Escolta, Avanço, Pegue a Bandeira e Corrida
+                                <input type="radio" name="opcao12" value="0" /> Escolta, Avanço, Pegue a Bandeira e
+                                Corrida
                             </div>
                             <div>
-                                <input type="radio" name="opcao12" value="0"/> Escolta, Controle, Avanço e Vingança de Junkstein
+                                <input type="radio" name="opcao12" value="0" /> Escolta, Controle, Avanço e Vingança de
+                                Junkstein
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>
@@ -271,18 +278,19 @@
 
                     <div class="pergunta13" style="display: none;">
                         <div class="alternativas">
-                            <label for="opcao5">13) A personagem Phara tem uma mãe membra da Overwatch. Quem é ela?</label>
+                            <label for="opcao5">13) A personagem Phara tem uma mãe membra da Overwatch. Quem é
+                                ela?</label>
                             <div>
-                                <input type="radio" name="opcao13" value="1"/> Ana Amari
+                                <input type="radio" name="opcao13" value="correta" /> Ana Amari
                             </div>
                             <div>
-                                <input  type="radio" name="opcao13" value="0"/> Brigitte Lindholm
+                                <input type="radio" name="opcao13" value="0" /> Brigitte Lindholm
                             </div>
                             <div>
-                                <input type="radio" name="opcao13" value="0"/> Doutora Angela Ziegler
+                                <input type="radio" name="opcao13" value="0" /> Doutora Angela Ziegler
                             </div>
                             <div>
-                                <input type="radio" name="opcao13" value="0"/> Aleksandra Zaryanova
+                                <input type="radio" name="opcao13" value="0" /> Aleksandra Zaryanova
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>
@@ -292,16 +300,16 @@
                         <div class="alternativas">
                             <label for="opcao5">14) Qual personagem é um(a) hacker profissional?</label>
                             <div>
-                                <input type="radio" name="opcao14" value="0"/> Tracer
+                                <input type="radio" name="opcao14" value="0" /> Tracer
                             </div>
                             <div>
-                                <input  type="radio" name="opcao14" value="0"/> Zarya
+                                <input type="radio" name="opcao14" value="0" /> Zarya
                             </div>
                             <div>
-                                <input type="radio" name="opcao14" value="1"/> Sombra
+                                <input type="radio" name="opcao14" value="correta" /> Sombra
                             </div>
                             <div>
-                                <input type="radio" name="opcao14" value="0"/> Nenhuma das opções acima
+                                <input type="radio" name="opcao14" value="0" /> Nenhuma das opções acima
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>
@@ -311,16 +319,16 @@
                         <div class="alternativas">
                             <label for="opcao5">15) Qual personagem teletransporta no tempo?</label>
                             <div>
-                                <input type="radio" name="opcao15" value="0"/> Junkrat
+                                <input type="radio" name="opcao15" value="0" /> Junkrat
                             </div>
                             <div>
-                                <input  type="radio" name="opcao15" value="1"/> Tracer
+                                <input type="radio" name="opcao15" value="correta" /> Tracer
                             </div>
                             <div>
-                                <input type="radio" name="opcao15" value="0"/> Baptiste
+                                <input type="radio" name="opcao15" value="0" /> Baptiste
                             </div>
                             <div>
-                                <input type="radio" name="opcao15" value="0"/> Doomfist
+                                <input type="radio" name="opcao15" value="0" /> Doomfist
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>
@@ -330,16 +338,16 @@
                         <div class="alternativas">
                             <label for="opcao5">16) Qual personagem de overwatch lhe deixa congelado?</label>
                             <div>
-                                <input type="radio" name="opcao16" value="1"/> Mei
+                                <input type="radio" name="opcao16" value="correta" /> Mei
                             </div>
                             <div>
-                                <input  type="radio" name="opcao16" value="0"/> Soujourn
+                                <input type="radio" name="opcao16" value="0" /> Soujourn
                             </div>
                             <div>
-                                <input type="radio" name="opcao16" value="0"/> Rainha Junker
+                                <input type="radio" name="opcao16" value="0" /> Rainha Junker
                             </div>
                             <div>
-                                <input type="radio" name="opcao16" value="0"/> Pharah
+                                <input type="radio" name="opcao16" value="0" /> Pharah
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>
@@ -349,16 +357,16 @@
                         <div class="alternativas">
                             <label for="opcao5">17) Quais personagens de Overwatch voam?</label>
                             <div>
-                                <input type="radio" name="opcao17" value="0"/> Winston e Tracer
+                                <input type="radio" name="opcao17" value="0" /> Winston e Tracer
                             </div>
                             <div>
-                                <input  type="radio" name="opcao17" value="0"/> Reaper e Widowmaker
+                                <input type="radio" name="opcao17" value="0" /> Reaper e Widowmaker
                             </div>
                             <div>
-                                <input type="radio" name="opcao17" value="1"/>  Phara e Echo
+                                <input type="radio" name="opcao17" value="correta" /> Phara e Echo
                             </div>
                             <div>
-                                <input type="radio" name="opcao17" value="0"/> Symmetra e Sigma
+                                <input type="radio" name="opcao17" value="0" /> Symmetra e Sigma
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>
@@ -368,16 +376,16 @@
                         <div class="alternativas">
                             <label for="opcao5">18) Qual personagem se assemelha a uma bola?</label>
                             <div>
-                                <input type="radio" name="opcao18" value="0"/> Bastion
+                                <input type="radio" name="opcao18" value="0" /> Bastion
                             </div>
                             <div>
-                                <input  type="radio" name="opcao18" value="0"/> Roadhog
+                                <input type="radio" name="opcao18" value="0" /> Roadhog
                             </div>
                             <div>
-                                <input type="radio" name="opcao18" value="0"/> DVA
+                                <input type="radio" name="opcao18" value="0" /> DVA
                             </div>
                             <div>
-                                <input type="radio" name="opcao18" value="1"/> Hammond
+                                <input type="radio" name="opcao18" value="correta" /> Hammond
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>
@@ -387,16 +395,16 @@
                         <div class="alternativas">
                             <label for="opcao5">19) Qual personagem é um engenheiro?</label>
                             <div>
-                                <input type="radio" name="opcao19" value="0"/> Moira
+                                <input type="radio" name="opcao19" value="0" /> Moira
                             </div>
                             <div>
-                                <input  type="radio" name="opcao19" value="0"/> Doomfist
+                                <input type="radio" name="opcao19" value="0" /> Doomfist
                             </div>
                             <div>
-                                <input type="radio" name="opcao19" value="0"/> Reinhardt
+                                <input type="radio" name="opcao19" value="0" /> Reinhardt
                             </div>
                             <div>
-                                <input type="radio" name="opcao19" value="1"/> Tobjorn
+                                <input type="radio" name="opcao19" value="correta" /> Tobjorn
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>
@@ -406,16 +414,16 @@
                         <div class="alternativas">
                             <label for="opcao5">20) Quem fala "Ryūjin no ken wo kūrae!"</label>
                             <div>
-                                <input type="radio" name="opcao20" value="0"/> Ashe
+                                <input type="radio" name="opcao20" value="0" /> Ashe
                             </div>
                             <div>
-                                <input  type="radio" name="opcao20" value="1"/> Genji
+                                <input type="radio" name="opcao20" value="correta" /> Genji
                             </div>
                             <div>
-                                <input type="radio" name="opcao20" value="0"/> Cassidy
+                                <input type="radio" name="opcao20" value="0" /> Cassidy
                             </div>
                             <div>
-                                <input type="radio" name="opcao20" value="0"/> Hanzo
+                                <input type="radio" name="opcao20" value="0" /> Hanzo
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>
@@ -427,45 +435,59 @@
                             <p>Para conferir o nosso top 10 acesse o nosso <a href="dashboard.html">Dashboard</a></p>
                         </div>
                     </div>
-    
+
                 </div>
             </div>
         </div>
     </div>
 
-    
+
     <div class="footer">
         <div class="container">
             <span>&copy 2000 e Sempre -- Nathan David</span>
         </div>
     </div>
 </body>
+
 </html>
 
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO
 
-    var index = 1
     var acertos = 0
-
+    var cont = 1
+    var index = 1
+    var vt_repeticao = []
 
     function mudar() {
-        for (;index <= 20;) {
+        var numero = (Math.random() * 19) + 1;
+
+        if (cont <= 20) {
+            while (vt_repeticao.indexOf(numero.toFixed(0)) != -1) {
+                numero = (Math.random() * 19) + 1;
+            }
+        }
+
+
+        for (; cont <= 20;) {
             var question = document.querySelector(`.pergunta${index}`);
 
-            var resposta = document.querySelector(`input[name="opcao${index}"]:checked`).value 
-            
-            if(resposta == "1") {
+            var resposta = document.querySelector(`input[name="opcao${index}"]:checked`).value
+
+            if (resposta == "correta") {
                 acertos++
             }
 
             question.style.display = "none";
+            cont++
             break;
         }
 
-        index++
+        index = numero.toFixed(0)
 
-        if (index <= 20) {
+        vt_repeticao.push(index)
+
+        if (cont <= 20) {
             document.querySelector(`.pergunta${index}`).style.display = "block";
         } else {
             titulinho.innerHTML = `Você acertou um total de:`
