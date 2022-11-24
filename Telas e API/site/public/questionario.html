@@ -460,11 +460,15 @@
     var vt_repeticao = []
 
     function mudar() {
-        var numero = (Math.random() * 19) + 1;
+        if (cont == 1) {
+            vt_repeticao.push("1")
+        }
+
+        var numero = (Math.random() * 19 + 1).toFixed(0);
 
         if (cont <= 20) {
-            while (vt_repeticao.indexOf(numero.toFixed(0)) != -1) {
-                numero = (Math.random() * 19) + 1;
+            while (vt_repeticao.indexOf(numero) != -1) {
+                numero = (Math.random() * 19 + 1).toFixed(0);
             }
         }
 
@@ -483,7 +487,7 @@
             break;
         }
 
-        index = numero.toFixed(0)
+        index = Number(numero)
 
         vt_repeticao.push(index)
 
