@@ -141,6 +141,10 @@ body {
     justify-content: space-between;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .inicio .container .textoInicio {
     height: 100%;
     width: 35vw;
