@@ -31,7 +31,7 @@
                 </div>
                 <ul>
                     <h3><span id="b_usuario">usuário</span></h3>
-                    <li id="cadastroBotao"><a href="index.html">Sair</a></li>
+                    <li id="cadastroBotao"><a onclick="limparSessao()">Sair</a></li>
                 </ul>
             </div>
         </div>
@@ -58,11 +58,10 @@
     let data = {
         labels: [],
         datasets: [{
-            label: 'Acertos',
-            backgroundColor: '#F06414',
-            borderColor: 'rgb(255, 255, 255)',
+            barThickness: 120,
+            label: ['Top 5 - Desafio'],
+            backgroundColor: ['#0000CD', '#DAA520', '#fcff83', '#788cbf', '#838e91'],
             data: [],
-
         }
         ]
     };
@@ -70,11 +69,14 @@
     const config = {
         type: 'bar',
         data: data,
-        options: {}
+        options: {
+            animations: {
+
+            }
+        }
     };
 
-    
-
+    config.options.animation = false;
 
     atualizarGrafico()
 
@@ -96,7 +98,7 @@
                         document.getElementById('myChart'),
                         config
                     );
-
+                    
                 });
             } else {
                 throw ('Houve um erro na API!');

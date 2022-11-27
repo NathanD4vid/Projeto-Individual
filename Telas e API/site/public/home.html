@@ -28,7 +28,7 @@
                 </div>  
                 <ul>
                     <h3><span id="b_usuario">usuário</span></h3>
-                    <li id="cadastroBotao"><a href="index.html">Sair</a></li>    
+                    <li id="cadastroBotao"><a onclick="limparSessao()">Sair</a></li>    
                 </ul>
             </div>
         </div>
@@ -381,7 +381,7 @@
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-    
+                
                 idServer2: idVar2
             })
         }).then(function (resposta) {
