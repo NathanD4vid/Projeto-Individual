@@ -10,12 +10,11 @@ var app = express();
 
 var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
-// var avisosRouter = require("./src/routes/avisos");
-// var medidasRouter = require("./src/routes/medidas");
 var quizRouter = require("./src/routes/quiz");
 var desafioRouter = require("./src/routes/desafio");
 var atualizarRouter = require("./src/routes/atualizar");
 var dashRouter = require("./src/routes/dash");
+var kpiRouter = require("./src/routes/kpi");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -25,12 +24,11 @@ app.use(cors());
 
 app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
-// app.use("/avisos", avisosRouter);
-// app.use("/medidas", medidasRouter);
 app.use("/quiz", quizRouter);
 app.use("/desafio", desafioRouter);
 app.use("/atualizar", atualizarRouter);
 app.use("/dash", dashRouter);
+app.use("/kpi", kpiRouter);
 
 app.listen(PORTA, function () {
     console.log(`Servidor do seu site já está rodando! Acesse o caminho a seguir para visualizar: http://localhost:${PORTA} \n

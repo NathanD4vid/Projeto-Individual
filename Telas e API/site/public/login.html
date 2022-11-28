@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/login.css">
     <link REL="SHORTCUT ICON" HREF="img/favicon.ico">
+    <script src="js/funcoes.js"></script>
     <title>Login</title>
 </head>
 <body>
@@ -24,12 +25,18 @@
                     </div> 
                 </div>
                 <div class="campos">
-                    
-                    <p>Email:</p> <input id="ipt_email">
-                    <p>Senha:</p> <input type="password" id="ipt_senha">
+                    <div class="campo">
+                        <p>Email:</p> 
+                        <input id="ipt_email">
+                    </div>
+                    <div class="campo">
+                        <p>Senha:</p> 
+                        <input type="password" id="ipt_senha">
+                    </div>
 
                     <button class="botaoEntrar" href="" onclick="entrar()">Entrar</button>
-
+                    <div id="div_aguardar" style="display: none"><img src="gifs/aguarde-orange.gif" alt=""></div>
+                    <div id="div_mensagem" style="display: none"></div>
                     <a class="botaoCadastro" href="cadastro.html">Não tem uma conta?</a>
                 </div>
             </div>
@@ -42,20 +49,21 @@
 
 
     function entrar() {
-        // aguardar();
 
         var emailVar = ipt_email.value;
         var senhaVar = ipt_senha.value;
 
         if (emailVar == "" || senhaVar == "") {
-            // cardErro.style.display = "block"
-            alert("Campos em branco");
-            // finalizarAguardar();
-            return false;
+            div_mensagem.style.display = 'flex';
+            div_mensagem.innerHTML = `Erro!!! Verifique os campos informados`;
+            div_mensagem.style.color = 'red';
+            setTimeout(function () {
+                        div_mensagem.style.display = 'none';;
+                    }, 5000);
+            return false
         }
-        // else {
-        //     setInterval(sumirMensagem, 5000)
-        // }
+
+        aguardar();
 
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
@@ -75,6 +83,9 @@
             if (resposta.ok) {
                 console.log(resposta);
 
+                div_mensagem.style.display = 'flex';
+                div_mensagem.innerHTML = `Login realizado com sucesso! Redirecionando...`
+
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
@@ -83,20 +94,26 @@
                     sessionStorage.NOME_USUARIO = json.username;
                     sessionStorage.ID_USUARIO = json.id;
                     sessionStorage.QUIZ_USUARIO = json.quiz;
+                    sessionStorage.ELO_USUARIO = json.elo;
 
                     setTimeout(function () {
+                        finalizarAguardar();
                         window.location = "home.html";
-                    }, 1000); // apenas para exibir o loading
+                    }, 3000); // apenas para exibir o loading
 
                 });
 
             } else {
 
                 console.log("Houve um erro ao tentar realizar o login!");
+                
+                div_mensagem.style.display = 'flex';
+                div_mensagem.innerHTML = `Credenciais incorretas, por favor verifique!!`
+                div_mensagem.style.color = 'red';
+                finalizarAguardar();
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    // finalizarAguardar(texto);
                 });
             }
 
@@ -107,8 +124,5 @@
         return false;
     }
 
-    // function sumirMensagem() {
-    //     cardErro.style.display = "none"
-    // }
 
 </script>

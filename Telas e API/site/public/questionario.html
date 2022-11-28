@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/questionario.css">
     <link REL="SHORTCUT ICON" HREF="img/favicon.ico">
+    <script src="js/funcoes.js"></script>
     <title>Questionário</title>
 </head>
 
@@ -30,6 +31,7 @@
                 </div>
                 <ul>
                     <h3><span id="b_usuario">usuário</span></h3>
+                    <span id="b_elo"></span>
                     <li id="cadastroBotao"><a onclick="limparSessao()">Sair</a></li>
                 </ul>
             </div>
@@ -38,14 +40,14 @@
         <div class="premios">
             <div class="container">
                 <div class="tituloQuestionario">
-                    <h3 id="titulinho">Preparado para um desafio?</h3>
+                    <h2 id="titulinho">Preparado para um desafio?</h2>
                 </div>
 
                 <div class="questionario">
 
                     <div class="pergunta1" style="display: block;">
                         <div class="alternativas">
-                            <label>1) Qual o personagem de nacionalidade brasileria de Overwatch?</label>
+                            <label> Qual o personagem de nacionalidade brasileria de Overwatch?</label>
                             <div>
                                 <input type="radio" name="opcao1" value="0" /> Soldado 76
                             </div>
@@ -64,7 +66,7 @@
 
                     <div class="pergunta2" style="display: none;">
                         <div class="alternativas">
-                            <label>2) Qual mapa se passa no Brasil?</label>
+                            <label> Qual mapa se passa no Brasil?</label>
                             <div>
                                 <input type="radio" name="opcao2" value="0" /> Rota 66
                             </div>
@@ -83,7 +85,7 @@
 
                     <div class="pergunta3" style="display: none;">
                         <div class="alternativas">
-                            <label>3) Qual personagem é irmão do Genji?</label>
+                            <label> Qual personagem é irmão do Genji?</label>
                             <div>
                                 <input type="radio" name="opcao3" value="correta" /> Hanzo
                             </div>
@@ -102,7 +104,7 @@
 
                     <div class="pergunta4" style="display: none;">
                         <div class="alternativas">
-                            <label>4) Quando overwatch ganhou o Game Of The Year?</label>
+                            <label> Quando overwatch ganhou o Game Of The Year?</label>
                             <div>
                                 <input type="radio" name="opcao4" value="0" /> 2020
                             </div>
@@ -121,7 +123,7 @@
 
                     <div class="pergunta5" style="display: none;">
                         <div class="alternativas">
-                            <label>5) Qual a organização inimiga da Overwatch?</label>
+                            <label> Qual a organização inimiga da Overwatch?</label>
                             <div>
                                 <input type="radio" name="opcao5" value="correta" /> Talon
                             </div>
@@ -140,7 +142,7 @@
 
                     <div class="pergunta6" style="display: none;">
                         <div class="alternativas">
-                            <label>6) O que a d.va fala depois que ela utiliza sua ultimate?</label>
+                            <label> O que a d.va fala depois que ela utiliza sua ultimate?</label>
                             <div>
                                 <input type="radio" name="opcao6" value="0" /> "La vaiii"
                             </div>
@@ -159,7 +161,7 @@
 
                     <div class="pergunta7" style="display: none;">
                         <div class="alternativas">
-                            <label>7) Qual evento levou a criação da Overwatch?</label>
+                            <label> Qual evento levou a criação da Overwatch?</label>
                             <div>
                                 <input type="radio" name="opcao7" value="0" /> Ataque Alienigêna
                             </div>
@@ -178,7 +180,7 @@
 
                     <div class="pergunta8" style="display: none;">
                         <div class="alternativas">
-                            <label>8) Qual personagem tem uma ultimate que te deixa preso em um buraco
+                            <label> Qual personagem tem uma ultimate que te deixa preso em um buraco
                                 negro?</label>
                             <div>
                                 <input type="radio" name="opcao8" value="correta" /> Zarya
@@ -198,7 +200,7 @@
 
                     <div class="pergunta9" style="display: none;">
                         <div class="alternativas">
-                            <label>9) Qual o melhor genji do mundo?</label>
+                            <label> Qual o melhor genji do mundo?</label>
                             <div>
                                 <input type="radio" name="opcao9" value="0" /> Nitro
                             </div>
@@ -217,7 +219,7 @@
 
                     <div class="pergunta10" style="display: none;">
                         <div class="alternativas">
-                            <label>10) Qual o elo máximo do Overwatch</label>
+                            <label> Qual o elo máximo do Overwatch</label>
                             <div>
                                 <input type="radio" name="opcao10" value="correta" /> Top 500
                             </div>
@@ -236,7 +238,7 @@
 
                     <div class="pergunta11" style="display: none;">
                         <div class="alternativas">
-                            <label>11) Qual o elo mínimo em Overwatch?</label>
+                            <label> Qual o elo mínimo em Overwatch?</label>
                             <div>
                                 <input type="radio" name="opcao11" value="correta" /> Bronze
                             </div>
@@ -255,7 +257,7 @@
 
                     <div class="pergunta12" style="display: none;">
                         <div class="alternativas">
-                            <label>12) Quais são os tipos de mapa disponíveis na rankeada?</label>
+                            <label> Quais são os tipos de mapa disponíveis na rankeada?</label>
                             <div>
                                 <input type="radio" name="opcao12" value="correta" /> Híbrido, Escolta, Controle e
                                 Avanço
@@ -278,8 +280,7 @@
 
                     <div class="pergunta13" style="display: none;">
                         <div class="alternativas">
-                            <label>13) A personagem Phara tem uma mãe membra da Overwatch. Quem é
-                                ela?</label>
+                            <label> A personagem Phara tem uma mãe membra da Overwatch. Quem é ela?</label>
                             <div>
                                 <input type="radio" name="opcao13" value="correta" /> Ana Amari
                             </div>
@@ -298,7 +299,7 @@
 
                     <div class="pergunta14" style="display: none;">
                         <div class="alternativas">
-                            <label>14) Qual personagem é um(a) hacker profissional?</label>
+                            <label> Qual personagem é um(a) hacker profissional?</label>
                             <div>
                                 <input type="radio" name="opcao14" value="0" /> Tracer
                             </div>
@@ -317,7 +318,7 @@
 
                     <div class="pergunta15" style="display: none;">
                         <div class="alternativas">
-                            <label>15) Qual personagem teletransporta no tempo?</label>
+                            <label> Qual personagem teletransporta no tempo?</label>
                             <div>
                                 <input type="radio" name="opcao15" value="0" /> Junkrat
                             </div>
@@ -336,7 +337,7 @@
 
                     <div class="pergunta16" style="display: none;">
                         <div class="alternativas">
-                            <label>16) Qual personagem de overwatch lhe deixa congelado?</label>
+                            <label> Qual personagem de overwatch lhe deixa congelado?</label>
                             <div>
                                 <input type="radio" name="opcao16" value="correta" /> Mei
                             </div>
@@ -355,7 +356,7 @@
 
                     <div class="pergunta17" style="display: none;">
                         <div class="alternativas">
-                            <label>17) Quais personagens de Overwatch voam?</label>
+                            <label> Quais personagens de Overwatch voam?</label>
                             <div>
                                 <input type="radio" name="opcao17" value="0" /> Winston e Tracer
                             </div>
@@ -374,7 +375,7 @@
 
                     <div class="pergunta18" style="display: none;">
                         <div class="alternativas">
-                            <label>18) Qual personagem se assemelha a uma bola?</label>
+                            <label> Qual personagem se assemelha a uma bola?</label>
                             <div>
                                 <input type="radio" name="opcao18" value="0" /> Bastion
                             </div>
@@ -393,7 +394,7 @@
 
                     <div class="pergunta19" style="display: none;">
                         <div class="alternativas">
-                            <label>19) Qual personagem é um engenheiro?</label>
+                            <label> Qual personagem é um engenheiro?</label>
                             <div>
                                 <input type="radio" name="opcao19" value="0" /> Moira
                             </div>
@@ -412,7 +413,7 @@
 
                     <div class="pergunta20" style="display: none;">
                         <div class="alternativas">
-                            <label>20) Quem fala "Ryūjin no ken wo kūrae!"</label>
+                            <label> Quem fala "Ryūjin no ken wo kūrae!"</label>
                             <div>
                                 <input type="radio" name="opcao20" value="0" /> Ashe
                             </div>
@@ -431,8 +432,13 @@
 
                     <div id="parabens" style="display: none;">
                         <div class="salve">
-                            <p id="acertosTotal"></p>
-                            <p>Para conferir o nosso top 10 acesse o nosso <a href="dashboard.html">Dashboard</a></p>
+                            <span id="acertosTotal"></span>
+                            <div id="box">
+                                <span id="span_msg"></span>
+                                <span id="eloTotal"></span>
+                                <span id="nomeElo"></span>
+                            </div>
+                            <p>Para conferir o nosso top 5 acesse o nosso <a id="dashLink" href="dashboard.html">Dashboard</a></p>
                         </div>
                     </div>
 
@@ -440,7 +446,6 @@
             </div>
         </div>
     </div>
-
 
     <div class="footer">
         <div class="container">
@@ -453,11 +458,15 @@
 
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO
+    b_elo.innerHTML = `<img src="${sessionStorage.ELO_USUARIO}" alt="" id="elozinho">`
 
-    var acertos = 0
-    var cont = 1
-    var index = 1
-    var vt_repeticao = []
+    var acertos = 0;
+    var cont = 1;
+    var index = 1;
+    var vt_repeticao = [];
+    var elo = 0;
+    var eloNome = 0;
+
 
     function mudar() {
         if (cont == 1) {
@@ -494,25 +503,63 @@
         if (cont <= 20) {
             document.querySelector(`.pergunta${index}`).style.display = "block";
         } else {
+
+            if (acertos <= 4) {
+                elo = "img/elos/bronze.png"
+                eloNome = "Bronze"
+            } else if (acertos <= 7) {
+                elo = "img/elos/silver.png"
+                eloNome = "Prata"
+            } else if (acertos <= 10) {
+                elo = "img/elos/gold.png"
+                eloNome = "Ouro"
+            } else if (acertos <= 12) {
+                elo = "img/elos/platinum.png"
+                eloNome = "Platina"
+            } else if (acertos <= 14) {
+                elo = "img/elos/diamante.png"
+                eloNome = "Diamante"
+            } else if (acertos <= 16) {
+                elo = "img/elos/master.png"
+                eloNome = "Mestre"
+            } else if (acertos <= 18) {
+                elo = "img/elos/grao.png"
+                eloNome = "Grão-Mestre"
+            } else {
+                elo = "img/elos/top500.png"
+                eloNome = "Top-500"
+            } 
+
             titulinho.innerHTML = `Você acertou um total de:`
-            document.querySelector(`#parabens`).style.display = "block";
-            acertosTotal.innerHTML = acertos;
+            acertosTotal.innerHTML = `${acertos} de 20`
+            document.querySelector(`#parabens`).style.display = "flex";
+            span_msg.innerHTML = `Seu novo elo é:`;
+            eloTotal.innerHTML = `<img src="${elo}" alt="" id="elozinho2">`;
+            nomeElo.innerHTML = `${eloNome}`;
+
             cadastrarResposta()
         }
     }
 
     function cadastrarResposta() {
-        // aguardar();
+        sessionStorage.ELO_USUARIO = elo;
 
-        //Recupere o valor da nova input pelo nome do id
-        // Agora vá para o método fetch logo abaixo
         var acertosVar = acertos;
         var idVar = sessionStorage.ID_USUARIO;
 
+        if (acertosVar == 0) {
+            acertosVar = "0"
+        }
+        
         if (acertosVar == "" || idVar == "") {
             alert("Erro no questionario");
             return false;
         }
+
+        if (acertosVar == "0") {
+            acertosVar = 0
+        }
+
         fetch("/desafio/cadastrar", {
             method: "POST",
             headers: {
@@ -520,7 +567,7 @@
             },
             body: JSON.stringify({
                 acertosServer: acertosVar,
-                idServer: idVar
+                idServer: idVar,
             })
         }).then(function (resposta) {
 
@@ -528,7 +575,8 @@
 
             if (resposta.ok) {
                 alert('Resposta enviada ao banco')
-
+                 
+                atualizarElo();
             } else {
                 throw ("Houve um erro ao tentar enviar ao banco");
             }
@@ -538,4 +586,38 @@
         return false;
     }
 
+    function atualizarElo() {
+        var eloVar = elo;
+        var idVar = sessionStorage.ID_USUARIO;
+
+        if (eloVar == "" || idVar == "") {
+            alert("Erro no questionario");
+
+            return false;
+        }
+
+        fetch("/atualizar/elo", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                eloServer: eloVar,
+                idServer3: idVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                alert('Elo enviado ao banco')
+
+            } else {
+                throw ("Houve um erro ao tentar enviar ao banco");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+        return false;
+    }
 </script>

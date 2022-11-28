@@ -323,3 +323,13 @@ body {
     align-items: center;
     color: #FFFF;
 }
+
+#b_elo {
+    width: 2.7vw;
+    display: flex;
+    align-items: center;
+}
+
+#elozinho{
+    width: 100%;
+}

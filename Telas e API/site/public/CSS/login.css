@@ -19,6 +19,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 25% ;
+    box-shadow: 10px -0px 10px rgba(50, 50, 50, 0.77);
 }
 
 .formulario {
@@ -69,10 +70,10 @@ body {
     height: 40vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 
 .campos p {
-    margin-top: 3vh;
     font-size: 1.2rem;
 }
 
@@ -83,11 +84,11 @@ body {
     height: 4vh;    
     border: none;
     border-bottom: solid 1px #eb7e40;
+    width: 20vw;
 }
 
 .campos .botaoEntrar {
     font-size: 1.2rem;
-    margin-top: 5vh;
     align-self: center;
     width: 90%;
     height: 5.5vh;
@@ -105,7 +106,6 @@ body {
     text-align: center;
     font-size: 1rem;
     width: 50%;
-    margin-top: 5vh;
     text-decoration: none;
     color: #eb7e40;
     text-decoration: underline;
@@ -119,4 +119,21 @@ body {
     .forms .logoOver2 {
         height: 17vh;
     }
+}
+
+#div_aguardar {
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#div_aguardar img {
+    height: 100%;
+    width: 4vw;
+}
+
+#div_mensagem {
+    display: flex;
+    justify-content: center;
 }

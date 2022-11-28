@@ -43,7 +43,7 @@ body {
 }
 
 .header .container .logos{
-    width: 41vw;
+    width: 47vw;
     display: flex;
     justify-content: space-between;
 }
@@ -57,31 +57,58 @@ body {
     border-radius: 0.5vw 0 0 0.5vw;
 }
 
+.header a {
+    text-decoration: none;
+    color: black;
+}
+
 .blizzard img{
     width: 4vw;
 }
 
 .header .container .over_logo{
-    width: 13vw;
+    width: 14vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
 
-.over_logo .logoOver{
-    width: 2.2vw;
+.header .container .over_logo a{
+    width:  10vw;
+    display: flex;
+    align-items: center;
 }
 
-.over_logo .escritaOver{
-    width: 75%;
+.header .container .over_logo #logoOver_header{
+    width:  2.5vw;
+    display: flex;
+    align-items: center;
 }
 
-.header .container .conteudos{
+.over_logo a .logoOver{
+    width: 100%;
+}
+
+.over_logo a .escritaOver{
+    width: 100%;
+}
+
+.header .container .logos .conteudos{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 20vw;
+    width: 24vw;
+}
+
+.logos .conteudos .navegacao{
+    padding: 0.4vw;
+    border-radius: 8px;
+}
+
+.logos .conteudos .navegacao:hover{
+    background-color: #de8b5b;
+    color: rgb(255, 255, 255);
 }
 
 .conteudos p{
@@ -109,9 +136,14 @@ body {
     font-size: 1rem;
 }
 
-.header a {
-    text-decoration: none;
-    color: black;
+.header #loginBotao {
+    padding: 0.4vw;
+    border-radius: 8px;
+}
+
+.header #loginBotao:hover {
+    background-color: #de8b5b;
+    color: rgb(255, 255, 255);
 }
 
 #cadastroBotao {
@@ -123,6 +155,12 @@ body {
 
 #cadastroBotao a{
     color: #FFFF;
+}
+
+#cadastroBotao:hover {
+    background-color: #de8b5b;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 /* SEÇÃO */
@@ -241,7 +279,7 @@ html {
     align-items: center;
 }
 
-.icons .icon, .icon2, .icon3{
+.icons #icon, #icon2, #icon3{
     height: 6.5vh;
     width: 3vw;
     display: flex;
@@ -251,12 +289,12 @@ html {
     border-radius: 50%;
 }
 
-.icons .icon:hover, .icon2:hover, .icon3:hover{
+.icons #icon:hover, #icon2:hover, #icon3:hover{
     background-color: #b3c1d1;
     cursor: pointer;
 }
 
-.icon img, .icon2 img, .icon3 img {
+#icon img, #icon2 img, #icon3 img {
     width: 1.7vw;
 }
 

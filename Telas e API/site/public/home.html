@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/home.css">
     <link REL="SHORTCUT ICON" HREF="img/favicon.ico">
+    <script src="js/funcoes.js"></script>
     <title>Home</title>
 </head>
 <body>
@@ -28,6 +29,7 @@
                 </div>  
                 <ul>
                     <h3><span id="b_usuario">usuário</span></h3>
+                    <span id="b_elo"></span>
                     <li id="cadastroBotao"><a onclick="limparSessao()">Sair</a></li>    
                 </ul>
             </div>
@@ -123,7 +125,7 @@
 
                 <div class="perguntas1">
                     <div class="alternativas">
-                        <label for="opcao">1) Qual a sua experiência com jogos FPS?</label>
+                        <label for="opcao1">1) Qual a sua experiência com jogos FPS?</label>
                         <div>
                             <input id="dps" type="radio" name="opcao1" value="a"/> 3 Anos ou mais
                         </div>
@@ -134,7 +136,7 @@
                             <input id="sup" type="radio" name="opcao1" value="c"/> Menos de 1 ano
                         </div>
                         <div>
-                            <input id="indeciso" type="radio" name="opcao1" value="d"/> Nenhuma experiência
+                            <input id="indeciso" type="radio" name="opcao1" value="c"/> Nenhuma experiência
                         </div>
                         <button onclick="registrar()">Próxima</button>
                     </div>
@@ -153,7 +155,7 @@
                             <input id="sup2" type="radio" name="opcao2" value="c"/> Passivo
                         </div>
                         <div>
-                            <input id="indeciso2" type="radio" name="opcao2" value="d"/> Não faço ideia
+                            <input id="indeciso2" type="radio" name="opcao2" value="c"/> Não faço ideia
                         </div>
                         <button onclick="registrar()">Próxima</button>
                     </div>
@@ -172,7 +174,7 @@
                             <input id="sup3" type="radio" name="opcao3" value="c"/> História/Aventura
                         </div>
                         <div>
-                            <input id="indeciso3" type="radio" name="opcao3" value="d"/> Não sei
+                            <input id="indeciso3" type="radio" name="opcao3" value="c"/> Não sei
                         </div>
                         <button onclick="registrar()">Próxima</button>
                     </div>
@@ -191,7 +193,7 @@
                             <input id="sup4" type="radio" name="opcao4" value="c"/> Calma
                         </div>
                         <div>
-                            <input id="indeciso4" type="radio" name="opcao4" value="d"/> Não sei ao certo
+                            <input id="indeciso4" type="radio" name="opcao4" value="c"/> Não sei ao certo
                         </div>
                         <button onclick="registrar()">Próxima</button>
                     </div>
@@ -235,13 +237,13 @@
 
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    b_elo.innerHTML = `<img src="${sessionStorage.ELO_USUARIO}" alt="" id="elozinho">`
     
     var index = 1
 
     var dps = 0
     var tank = 0
     var cura = 0
-    var indeciso = 0
 
     var habilitarQuiz = sessionStorage.QUIZ_USUARIO
     
@@ -262,14 +264,11 @@
                 tank++
             } else if (resposta == 'c') {
                 cura++
-            } else {
-                indeciso++
-            }
-
-            mudar()
+            } 
             break
         }
         i++
+        mudar()
     }
     
    
@@ -304,11 +303,6 @@
                 img_classes.src = 'img/curas.png';
                 classe = `suporte`;
                 cadastrarClasse()
-            } else if (indeciso >= 3) {
-                nome_classes.innerHTML = `SUPORTE`;
-                img_classes.src = 'img/curas.png';
-                classe = `suporte`;
-                cadastrarClasse()
             } else if ( dps == tank ) {
                 nome_classes.innerHTML = `TANQUE`;
                 img_classes.src = 'img/tanks.png';
@@ -324,7 +318,7 @@
                 img_classes.src = 'img/curas.png';
                 classe = `suporte`;
                 cadastrarClasse()
-            }
+            } 
         }
     }
 

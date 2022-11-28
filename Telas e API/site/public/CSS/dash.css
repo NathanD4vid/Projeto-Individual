@@ -8,7 +8,7 @@ body {
 }
 
 .banner{
-    height: 93vh;
+    height: 8vh;
     background: linear-gradient(45deg, #FAF7F0, #CDFCF6, #BCCEF8, #98A8F8);
     background-size: cover;
 }
@@ -37,7 +37,7 @@ body {
 }
 
 .header .container .logos{
-    width: 41vw;
+    width: 47vw;
     display: flex;
     justify-content: space-between;
 }
@@ -51,30 +51,57 @@ body {
     border-radius: 0.5vw 0 0 0.5vw;
 }
 
+.header a {
+    text-decoration: none;
+    color: black;
+}
+
 .blizzard img{
     width: 4vw;
 }
 
 .header .container .over_logo{
-    width: 13vw;
+    width: 14vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
+.header .container .over_logo a{
+    width:  10vw;
+    display: flex;
+    align-items: center;
+}
+
+.header .container .over_logo #logoOver_header{
+    width:  2.5vw;
+    display: flex;
+    align-items: center;
+}
+
 .over_logo .logoOver{
-    width: 2.2vw;
+    width: 100%;
 }
 
 .over_logo .escritaOver{
-    width: 75%;
+    width: 100%;
 }
 
 .header .container .conteudos{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 20vw;
+    width: 24vw;
+}
+
+.logos .conteudos .navegacao{
+    padding: 0.4vw;
+    border-radius: 8px;
+}
+
+.logos .conteudos .navegacao:hover{
+    background-color: #de8b5b;
+    color: rgb(255, 255, 255);
 }
 
 .conteudos p{
@@ -96,11 +123,6 @@ body {
     font-size: 1rem;
 }
 
-.header a {
-    text-decoration: none;
-    color: black;
-}
-
 #cadastroBotao {
     background-color: #F06414;
     border-radius: 1vh;
@@ -112,18 +134,33 @@ body {
     color: #FFFF;
 }
 
+#cadastroBotao:hover {
+    background-color: #de8b5b;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
 /* SEÇÃO */
 
-.premios {
+.chart {
     height: 85vh;
-    background: linear-gradient(45deg, #FAF7F0, #CDFCF6, #BCCEF8, #98A8F8);
+    width: 47vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.grafico h2{
+    margin: 0;
+    text-align: center;
+}
+
 .grafico {
-    width: 50vw;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 
@@ -134,4 +171,74 @@ body {
     justify-content: center;
     align-items: center;
     color: #FFFF;
+}
+
+#b_elo {
+    width: 2.7vw;
+    display: flex;
+    align-items: center;
+}
+
+#elozinho{
+    width: 100%;
+}
+
+.geral{
+    background: linear-gradient(45deg, #b5b4b3, #CDFCF6, #BCCEF8, #98A8F8);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box1, .box2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 70vh;
+    width: 20vw;
+    border-radius: 1.6vw;
+}
+
+.kpi1, .kpi2, .kpi3, .kpi4{
+    display: flex;
+    justify-content: center;
+    height: 28vh;
+    width: 18vw;
+    border-radius: 1.6vw;
+    border: solid 1px teal;
+    background-color: rgba(255, 255, 255, 0.856);
+}
+
+.box1 .container{
+    margin-top: 2vh;
+    height: 50%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box2 .container{
+    margin-top: 2vh;
+    height: 50%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box1 .container span{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.box2 .container span{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.geral h2{
+    margin: 0;
+    text-align: center;
 }

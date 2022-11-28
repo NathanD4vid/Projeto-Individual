@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="CSS/dash.css">
     <link REL="SHORTCUT ICON" HREF="img/favicon.ico">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/funcoes.js"></script>
     <title>Dashboard</title>
 </head>
 
 <body>
-
     <div class="banner">
         <div class="header">
             <div class="container">
@@ -21,24 +21,60 @@
                         <img src="img/Blizzard-Logo.png" alt="">
                     </div>
                     <div class="over_logo">
-                        <img src="img/logo.png" alt="" class="logoOver">
-                        <img src="img/over2.png" alt="" class="escritaOver">
+                        <a href="home.html" id="logoOver_header"><img src="img/logo.png" alt="" class="logoOver"></a>
+                        <a href="home.html"><img src="img/over2.png" alt="" class="escritaOver"></a>
                     </div>
                     <div class="conteudos">
-                        <a href="home.html">Home</a>
-                        <a href="questionario.html">Desafio</a>
+                        <a class="navegacao" href="home.html">Home</a>
+                        <a class="navegacao" href="questionario.html">Desafio</a>
                     </div>
                 </div>
                 <ul>
                     <h3><span id="b_usuario">usuário</span></h3>
+                    <span id="b_elo"></span>
                     <li id="cadastroBotao"><a onclick="limparSessao()">Sair</a></li>
                 </ul>
             </div>
         </div>
+    </div>
 
-        <div class="premios">
+    <div class="geral">
+        <div class="box1">
+            <div class="kpi1">
+                <div class="container">
+                    <h2>Quantidade de pessoas que fizeram o desafio</h2>
+                    <span>salve</span>
+                </div>
+            </div>
+
+            <div class="kpi2">
+                <div class="container">
+                    <h2>Média de acertos</h2>
+                    <span>salve</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart">
             <div class="grafico">
+                <h2>Os maiores 5 pontuadores do DESAFIO</h2>
                 <canvas id="myChart"></canvas>
+            </div>
+        </div>
+
+        <div class="box2">
+            <div class="kpi3">
+                <div class="container">
+                    <h2>Quantidade de pessoas que tiraram uma classe</h2>
+                    <span>salve</span>
+                </div>
+            </div>
+
+            <div class="kpi4">
+                <div class="container">
+                    <h2>Classe mais tirada</h2>
+                    <span>salve</span>
+                </div>
             </div>
         </div>
     </div>
@@ -54,11 +90,11 @@
 
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO
+    b_elo.innerHTML = `<img src="${sessionStorage.ELO_USUARIO}" alt="" id="elozinho">`
 
     let data = {
         labels: [],
         datasets: [{
-            barThickness: 120,
             label: ['Top 5 - Desafio'],
             backgroundColor: ['#0000CD', '#DAA520', '#fcff83', '#788cbf', '#838e91'],
             data: [],

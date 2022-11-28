@@ -30,14 +30,10 @@ function aguardar() {
     divAguardar.style.display = "flex";
 }
 
-function finalizarAguardar(texto) {
+function finalizarAguardar() {
     var divAguardar = document.getElementById("div_aguardar");
     divAguardar.style.display = "none";
 
-    var divErrosLogin = document.getElementById("div_erros_login");
-    if (texto) {
-        divErrosLogin.innerHTML = texto;
-    }
 }
 
 
