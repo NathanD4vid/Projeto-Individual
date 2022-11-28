@@ -41,16 +41,18 @@
     <div class="geral">
         <div class="box1">
             <div class="kpi1">
+                <img src="img/kpi/kpi1.png" alt="">
                 <div class="container">
                     <h2>Quantidade de pessoas que fizeram o desafio</h2>
-                    <span>salve</span>
+                    <span id="kpiCount">salve</span>
                 </div>
             </div>
 
             <div class="kpi2">
+                <img src="img/kpi/kpi2.png" alt="">
                 <div class="container">
                     <h2>Média de acertos</h2>
-                    <span>salve</span>
+                    <span id="kpiMedia">salve</span>
                 </div>
             </div>
         </div>
@@ -58,22 +60,29 @@
         <div class="chart">
             <div class="grafico">
                 <h2>Os maiores 5 pontuadores do DESAFIO</h2>
-                <canvas id="myChart"></canvas>
+                <div id="chartzinho">
+                    <canvas id="myChart"></canvas>
+                </div>
             </div>
         </div>
 
         <div class="box2">
             <div class="kpi3">
+                <img src="img/kpi/kpi4.png" alt="">
                 <div class="container">
                     <h2>Quantidade de pessoas que tiraram uma classe</h2>
-                    <span>salve</span>
+                    <span id="kpiPlayer">salve</span>
                 </div>
             </div>
 
             <div class="kpi4">
+                <img src="img/kpi/kpi3.png" alt="">
                 <div class="container">
                     <h2>Classe mais tirada</h2>
-                    <span>salve</span>
+                    <div class="kpiss">
+                        <span id="kpiClasse">salve</span>
+                        <span id="kpiClasse2">salve</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -96,7 +105,7 @@
         labels: [],
         datasets: [{
             label: ['Top 5 - Desafio'],
-            backgroundColor: ['#0000CD', '#DAA520', '#fcff83', '#788cbf', '#838e91'],
+            backgroundColor: ['#0000CD', '#DAA520', '#fcdf83', '#788cbf', '#838e91'],
             data: [],
         }
         ]
@@ -134,6 +143,95 @@
                         document.getElementById('myChart'),
                         config
                     );
+                    
+                });
+            } else {
+                throw ('Houve um erro na API!');
+            }
+        }).catch(function (resposta) {
+            console.error(resposta);
+
+        });
+    }
+
+    kpi()
+
+    function kpi() {
+        
+        fetch("/kpi/count").then(function (resposta) {
+            if (resposta.ok) {
+
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                    kpiCount.innerHTML = resposta[0].contar
+                    
+                });
+            } else {
+                throw ('Houve um erro na API!');
+            }
+        }).catch(function (resposta) {
+            console.error(resposta);
+
+        });
+    }
+
+    media()
+
+    function media() {
+        
+        fetch("/kpi/media").then(function (resposta) {
+            if (resposta.ok) {
+
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                    kpiMedia.innerHTML = `${resposta[0].acertos}`
+                    
+                });
+            } else {
+                throw ('Houve um erro na API!');
+            }
+        }).catch(function (resposta) {
+            console.error(resposta);
+
+        });
+    }
+
+    player()
+
+    function player() {
+        
+        fetch("/kpi/player").then(function (resposta) {
+            if (resposta.ok) {
+
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                    kpiPlayer.innerHTML = resposta[0].contados
+                    
+                });
+            } else {
+                throw ('Houve um erro na API!');
+            }
+        }).catch(function (resposta) {
+            console.error(resposta);
+
+        });
+    }
+
+    classe()
+
+    function classe() {
+        
+        fetch("/kpi/classe").then(function (resposta) {
+            if (resposta.ok) {
+
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                    kpiClasse.innerHTML = `${(resposta[0].classe).toUpperCase()}    `
+                    kpiClasse2.innerHTML = `${resposta[0].quantidade} vezes`
                     
                 });
             } else {

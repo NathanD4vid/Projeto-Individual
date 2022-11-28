@@ -24,15 +24,6 @@ fkUsuario int,
 foreign key (fkUsuario) references usuario (id)
 );
 
-select count(distinct fkUsuario) from usuario join desafio on id = fkUsuario;
-
-select avg(acertos) from desafio;
-
-select count(id) from usuario where quiz = 'true';
-
-select classe, count(classe) as classes from quiz group by classe order by classes desc;
-
-
 select * from usuario;
 select * from quiz;
 select * from desafio;
@@ -59,5 +50,11 @@ insert into desafio values
 	(5, 8, 5);
 
 select username, max(acertos) from desafio join usuario on id = fkUsuario group by username order by acertos desc limit 5;
-  
-select * from usuario join megaQuiz on id = fkUsuario;
+
+select count(distinct fkUsuario) as contar from usuario join desafio on id = fkUsuario;
+
+select round(avg(acertos), 2) as acertos from desafio;
+
+select count(id) as contados from usuario where quiz = 'true';
+
+select classe, count(classe) as quantidade from quiz group by classe order by quantidade desc limit 1;
