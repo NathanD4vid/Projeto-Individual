@@ -225,6 +225,7 @@ html {
     width: 90%;
     line-height: 160%;
     font-size: 1rem;
+    text-align: justify;
 }
 
 .inicio .container .imgInicio {
@@ -328,6 +329,7 @@ html {
 
 .textoHeroi .descricao {
     color: #ffff;
+    text-align: justify;
 }
 
 .descricao h3 {
@@ -349,7 +351,7 @@ html {
     font-size: 1rem;
     line-height: 150%;
     font-weight: 500;
-    text-shadow: 0.01em 0.02em 0.8em rgb(0, 0, 0)
+    text-shadow: 0.01em 0.02em 0.8em rgb(0, 0, 0);
 }
 
 /* SEÇÃO */
@@ -387,6 +389,7 @@ html {
 .miniContainer p{
     line-height: 150%;
     font-size: 1rem;
+    text-align: justify;
 }
 
 .imgPremio {
@@ -421,12 +424,25 @@ html {
 }
 
 .valores .container .bannerValor img{
-    width: 40vw;
+    width: 37vw;
     box-shadow: -15px 10px 10px rgba(50, 50, 50, 0.77);
+    margin-top: 5vh;
+}
+
+@media screen and (max-width: 1366px) {
+    .valores .container .bannerValor img{
+        margin-top: 8vh;
+    }
 }
 
 .valores .container .textoValor{
     width: 35vw;
+}
+
+@media screen and (max-width: 1366px) {
+    .valores .container .textoValor{
+        margin-top: 3vh;
+    }
 }
 
 .valores .container .textoValor h3{
