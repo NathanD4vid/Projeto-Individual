@@ -25,14 +25,14 @@
                         <img src="img/over2.png" alt="" class="escritaOver">
                     </div>
                     <div class="conteudos">
-                        <a href="home.html">Home</a>
-                        <a href="dashboard.html">Dashboard</a>
+                        <a class="navegacao" href="home.html">Home</a>
+                        <a class="navegacao" href="dashboard.html">Dashboard</a>
                     </div>
                 </div>
                 <ul>
                     <h3><span id="b_usuario">usuário</span></h3>
                     <span id="b_elo"></span>
-                    <li id="cadastroBotao"><a onclick="limparSessao()">Sair</a></li>
+                    <li id="cadastroBotao" onclick="limparSessao()"><a onclick="limparSessao()">Sair</a></li>
                 </ul>
             </div>
         </div>
@@ -47,9 +47,9 @@
 
                     <div class="pergunta1" style="display: block;">
                         <div class="alternativas">
-                            <label> Qual o personagem de nacionalidade brasileria de Overwatch?</label>
+                            <label> Qual o personagem de nacionalidade brasileira de Overwatch?</label>
                             <div>
-                                <input type="radio" name="opcao1" value="0" /> Soldado 76
+                                <input type="radio" name="opcao1" value="0" /> <span>Soldado 76</span> 
                             </div>
                             <div>
                                 <input type="radio" name="opcao1" value="correta" /> Lucio
@@ -200,18 +200,18 @@
 
                     <div class="pergunta9" style="display: none;">
                         <div class="alternativas">
-                            <label> Qual o melhor genji do mundo?</label>
+                            <label> Como se chama o combo das habilidades ultimate da Ana e do Genji?</label>
                             <div>
-                                <input type="radio" name="opcao9" value="0" /> Nitro
+                                <input type="radio" name="opcao9" value="0" /> SabreTurbo
                             </div>
                             <div>
-                                <input type="radio" name="opcao9" value="0" /> Megathan10
+                                <input type="radio" name="opcao9" value="0" /> SwordDragon
                             </div>
                             <div>
-                                <input type="radio" name="opcao9" value="correta" /> Yan
+                                <input type="radio" name="opcao9" value="correta" /> NanoBlade
                             </div>
                             <div>
-                                <input type="radio" name="opcao9" value="0" /> Yohan
+                                <input type="radio" name="opcao9" value="0" /> GenjiAmari
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>
@@ -240,7 +240,7 @@
                         <div class="alternativas">
                             <label> Qual o elo mínimo em Overwatch?</label>
                             <div>
-                                <input type="radio" name="opcao11" value="correta" /> Bronze
+                                <input type="radio" name="opcao11" value="0" /> Recruta
                             </div>
                             <div>
                                 <input type="radio" name="opcao11" value="0" /> Latão
@@ -249,7 +249,7 @@
                                 <input type="radio" name="opcao11" value="0" /> Ferro
                             </div>
                             <div>
-                                <input type="radio" name="opcao11" value="0" /> Lama
+                                <input type="radio" name="opcao11" value="correta" /> Bronze
                             </div>
                             <button onclick="mudar()">Próxima</button>
                         </div>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/historia.css">
+    <link REL="SHORTCUT ICON" HREF="img/favicon.ico">
+    <script src="js/funcoes.js"></script>
+    <title>História</title>
+</head>
+<body>
+
+    <div class="banner">
+        <div class="header">
+            <div class="container">
+                <div class="logos">
+                    <div class="blizzard">
+                        <img src="img/Blizzard-Logo.png" alt="">
+                    </div>
+                    <div class="over_logo">
+                        <img src="img/logo.png" alt="" class="logoOver">
+                        <img src="img/over2.png" alt="" class="escritaOver">
+                    </div>
+                    <div class="conteudos">
+                        <a class="navegacao" href="questionario.html">Desafio</a>
+                        <a class="navegacao" href="dashboard.html">Dashboard</a>
+                    </div>  
+                </div>  
+                <ul>
+                    <h3><span id="b_usuario">usuário</span></h3>
+                    <span id="b_elo"></span>
+                    <li id="cadastroBotao" onclick="limparSessao()"><a onclick="limparSessao()">Sair</a></li>    
+                </ul>
+            </div>
+        </div>
+    </div>
+        
+    <div class="inicio">
+        <div class="container">
+            <div class="owLeague">
+                <h2>A Crise Ômnica</h2>
+                <p>Há trinta anos atrás, sem aviso ou explicação, um conjunto desativado de fábricas se reatidfvaram e lançaram um esforço militar global contra toda a humanidade denominada Crise Ômnica. Apesar de implementar novas tecnologias, incluindo programas de armaduras motorizadas e super-soldados, nenhuma nação sozinha poderia enfrentar o crescente exército ômnico.</p>
+            </div>
+            <div class="owLeagueBanner">
+                <img src="img/overLore.jpg" alt="">
+            </div>
+        </div>
+    </div>
+        
+    <div class="classeJogo">
+        <div class="container">   
+                <div class="banner2">
+                    <img src="img/historia/historiaOver.png" alt="">
+                </div>
+                <div class="lore2">
+                    <h2>A criação da Overwatch</h2>
+                    <p>Foram as Nações Unidas que viraram o jogo trazendo os melhores indivíduos de cada nação para formar a Overwatch. Uma equipe de ataque pequena, ágil e poderosa o suficiente para ligar com devastadores ômnicos levando o resto da humanidade a lutar. No final, a Overwatch consegui acabar com a guerra e se tornaram heróis.</p>
+                </div>
+        </div>    
+    </div>
+
+    <div class="premios">
+        <div class="container">
+            <div>
+                <h2></h2>
+                <p></p>
+            </div>
+            <div>
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+        
+    <div class="footer">
+        <div class="container">
+            <span>&copy 2000 e Sempre -- Nathan David</span>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    b_elo.innerHTML = `<img src="${sessionStorage.ELO_USUARIO}" alt="" id="elozinho">`
+    
+</script>

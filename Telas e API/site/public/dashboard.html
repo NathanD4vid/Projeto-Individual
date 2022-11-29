@@ -32,7 +32,7 @@
                 <ul>
                     <h3><span id="b_usuario">usuário</span></h3>
                     <span id="b_elo"></span>
-                    <li id="cadastroBotao"><a onclick="limparSessao()">Sair</a></li>
+                    <li id="cadastroBotao" onclick="limparSessao()"><a onclick="limparSessao()">Sair</a></li>
                 </ul>
             </div>
         </div>
@@ -62,6 +62,13 @@
                 <h2>Os maiores 5 pontuadores do DESAFIO</h2>
                 <div id="chartzinho">
                     <canvas id="myChart"></canvas>
+                </div>
+                <div class="elosRank">
+                    <div id="top1">salve</div>
+                    <div id="top2">salve</div>
+                    <div id="top3">salve</div>
+                    <div id="top4">salve</div>
+                    <div id="top5">salve</div>
                 </div>
             </div>
         </div>
@@ -232,6 +239,32 @@
 
                     kpiClasse.innerHTML = `${(resposta[0].classe).toUpperCase()}    `
                     kpiClasse2.innerHTML = `${resposta[0].quantidade} vezes`
+                    
+                });
+            } else {
+                throw ('Houve um erro na API!');
+            }
+        }).catch(function (resposta) {
+            console.error(resposta);
+
+        });
+    }
+
+    elosRank()
+
+    function elosRank() {
+        
+        fetch("/kpi/elosRank").then(function (resposta) {
+            if (resposta.ok) {
+
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                    top1.innerHTML = `<img src="${resposta[0].elo}" alt="">`
+                    top2.innerHTML = `<img src="${resposta[1].elo}" alt="">`
+                    top3.innerHTML = `<img src="${resposta[2].elo}" alt="">`
+                    top4.innerHTML = `<img src="${resposta[3].elo}" alt="">`
+                    top5.innerHTML = `<img src="${resposta[4].elo}" alt="">`
                     
                 });
             } else {

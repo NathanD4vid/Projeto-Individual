@@ -112,6 +112,11 @@ body {
     text-decoration: underline;
 }
 
+.campos .botaoCadastro:hover{
+    cursor: pointer;
+    background-color: #de8b5b;
+}
+
 @media screen and (max-width: 1400px){
     .forms .logoOver2{
         height: 16vh;

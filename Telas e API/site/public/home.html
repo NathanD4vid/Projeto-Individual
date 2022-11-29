@@ -23,14 +23,14 @@
                         <img src="img/over2.png" alt="" class="escritaOver">
                     </div>
                     <div class="conteudos">
-                        <a href="questionario.html">Desafio</a>
-                        <a href="dashboard.html">Dashboard</a>
+                        <a class="navegacao" href="questionario.html">Desafio</a>
+                        <a class="navegacao" href="dashboard.html">Dashboard</a>
                     </div>  
                 </div>  
                 <ul>
                     <h3><span id="b_usuario">usuário</span></h3>
                     <span id="b_elo"></span>
-                    <li id="cadastroBotao"><a onclick="limparSessao()">Sair</a></li>    
+                    <li id="cadastroBotao" onclick="limparSessao()"><a onclick="limparSessao()">Sair</a></li>    
                 </ul>
             </div>
         </div>
@@ -291,32 +291,32 @@
             if (dps >= 3) {
                 nome_classes.innerHTML = `DANO`;
                 img_classes.src = 'img/danos.png';
-                classe = `dano`;
+                classe = `Dano`;
                 cadastrarClasse()
             } else if (tank >= 3) {
                 nome_classes.innerHTML = `TANQUE`;
                 img_classes.src = 'img/tanks.png';
-                classe = `tanque`;
+                classe = `Tanque`;
                 cadastrarClasse()
             } else if (cura >= 3) {
                 nome_classes.innerHTML = `SUPORTE`;
                 img_classes.src = 'img/curas.png';
-                classe = `suporte`;
+                classe = `Suporte`;
                 cadastrarClasse()
             } else if ( dps == tank ) {
                 nome_classes.innerHTML = `TANQUE`;
                 img_classes.src = 'img/tanks.png';
-                classe = `tanque`;
+                classe = `Tanque`;
                 cadastrarClasse()
             } else if (dps == cura) {
                 nome_classes.innerHTML = `SUPORTE`;
                 img_classes.src = 'img/curas.png';
-                classe = `suporte`;
+                classe = `Suporte`;
                 cadastrarClasse()
             } else if (tank == cura) {
                 nome_classes.innerHTML = `SUPORTE`;
                 img_classes.src = 'img/curas.png';
-                classe = `suporte`;
+                classe = `Suporte`;
                 cadastrarClasse()
             } 
         }

@@ -29,25 +29,25 @@ select * from quiz;
 select * from desafio;
 
 insert into usuario values
-	(1, 'Mega', 'Mega', '123', 'false'),
-	(2, 'Yan', 'Yan', '123', 'false'),
-	(3, 'Minero', 'Mineiro', '123', 'false'),
-	(4, 'Loula', 'Loula', '123', 'false'),
-	(5, 'Peps', 'Peps', '123', 'false');
+	(1, 'Mega', 'Mega', '123', 'true', 'img/elos/top500.png'),
+	(2, 'Yan', 'Yan', '123', 'true', 'img/elos/grao.png'),
+	(3, 'Minero', 'Mineiro', '123', 'true', 'img/elos/master.png'),
+	(4, 'Loula', 'Loula', '123', 'true', 'img/elos/diamante.png'),
+	(5, 'Peps', 'Peps', '123', 'true', 'img/elos/platinum.png');
 
 insert into quiz values 
-	(1, 'Tanque', 1),
+	(1, 'Dano', 1),
     (2, 'Tanque', 2),
     (3, 'Tanque', 3),
     (4, 'Tanque', 4),
-    (5, 'Tanque', 5);
+    (5, 'Suporte', 5);
 
 insert into desafio values 
-	(1, 10, 1),
-	(2, 3, 2),
-	(3, 13, 3),
-	(4, 7, 4),
-	(5, 8, 5);
+	(1, 20, 1),
+	(2, 18, 2),
+	(3, 16, 3),
+	(4, 14, 4),
+	(5, 12, 5);
 
 select username, max(acertos) from desafio join usuario on id = fkUsuario group by username order by acertos desc limit 5;
 

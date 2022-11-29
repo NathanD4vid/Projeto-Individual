@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
 
 body {
     margin: 0;
@@ -19,8 +20,27 @@ body {
     overflow: hidden;
 }
 
+.mensagem{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 90vh;
+    background-color: rgba(106, 116, 180, 0.337);
+}
+
+.mensagem .container h1{
+    font-family: 'Lalezar', cursive;
+    margin-top: 30vh;
+    text-transform: uppercase;
+    font-size: 7rem;
+    font-weight: 500;
+    text-shadow: 0.05em 0.05em 5.8em rgb(0, 0, 0);
+    color: rgb(253, 247, 247);
+    text-align: center;
+}
+
 .header {
-    background-color: #d8d8fc;
+    background-color: #b4b4c7;
     position: fixed;
     top: 2vh;
     z-index: 2;
@@ -216,8 +236,9 @@ html {
 }
 
 .inicio .container img{
-    width: 100%;
-    height: 80%;
+    width: 85%;
+    height: 65%;
+    box-shadow: 15px 10px 10px rgba(50, 50, 50, 0.77);
 }
 
 /* SEÇÃO */
@@ -331,6 +352,8 @@ html {
     text-shadow: 0.01em 0.02em 0.8em rgb(0, 0, 0)
 }
 
+/* SEÇÃO */
+
 .premios {
     height: 85vh;
     background: linear-gradient(45deg, #FAF7F0, #CDFCF6, #BCCEF8, #98A8F8);
@@ -374,7 +397,58 @@ html {
 
 .imgPremio img {
     width: 100%;
+    box-shadow: 15px 10px 10px rgba(50, 50, 50, 0.77);
 }
+
+/* SEÇÃO */
+
+.valores{
+    height: 75vh;
+    display: flex;
+    justify-content: center;  
+    background: linear-gradient(45deg, #6642b2, #d8cbff, #98a6f6, #2f61d7);
+}
+
+.valores .container{
+    margin-top: 10vh;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.valores .container .bannerValor{
+    width: 40vw;
+}
+
+.valores .container .bannerValor img{
+    width: 40vw;
+    box-shadow: -15px 10px 10px rgba(50, 50, 50, 0.77);
+}
+
+.valores .container .textoValor{
+    width: 35vw;
+}
+
+.valores .container .textoValor h3{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2vw;
+    font-size: 2rem;
+    font-weight: 500;
+    text-shadow: 0.01em 0.02em 0.8em rgb(0, 0, 0);
+    color: #FFFF;
+}
+
+.valores .container .textoValor p{
+    text-align: justify;
+    color: #FFFF;
+    font-size: 1rem;
+    line-height: 150%;
+    font-weight: 500;
+    text-shadow: 0.01em 0.02em 0.8em rgb(0, 0, 0);
+}
+
+/* SEÇÃO */
 
 .footer {
     height: 7vh;
@@ -383,4 +457,8 @@ html {
     justify-content: center;
     align-items: center;
     color: #FFFF;
+}
+
+.footer span{
+    font-weight: 500;
 }

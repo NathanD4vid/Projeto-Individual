@@ -14,7 +14,7 @@ body {
 }
 
 .header {
-    background-color: #d8d8fc;
+    background-color: #b4b4c7;
     position: fixed;
     top: 2vh;
     z-index: 2;
@@ -110,6 +110,22 @@ body {
 
 #cadastroBotao a{
     color: #FFFF;
+}
+
+.logos .conteudos .navegacao{
+    padding: 0.4vw;
+    border-radius: 8px;
+}
+
+.logos .conteudos .navegacao:hover{
+    background-color: #de8b5b;
+    color: rgb(255, 255, 255);
+}
+
+#cadastroBotao:hover {
+    background-color: #de8b5b;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 /* SEÇÃO */

@@ -15,7 +15,7 @@ body {
 }
 
 .header {
-    background-color: #d8d8fc;
+    background-color: #b4b4c7;
     position: fixed;
     top: 2vh;
     z-index: 2;
@@ -163,13 +163,13 @@ body {
 }
 
 .grafico {
-    height: 60vh;
+    height: 70vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: #d8eded;
+    background-color: #f1f7f7;
     box-shadow: 8px 5px 10px rgba(50, 50, 50, 0.77);
     border-radius: 1.6vw;
 }
@@ -178,6 +178,7 @@ body {
     width: 44vw;
 }
 
+/* SEÇÃO */
 
 .footer {
     height: 7vh;
@@ -187,6 +188,12 @@ body {
     align-items: center;
     color: #FFFF;
 }
+
+.footer span{
+    font-weight: 500;
+}
+
+/* SEÇÃO */
 
 #b_elo {
     width: 2.7vw;
@@ -276,18 +283,24 @@ body {
         margin: 0;
         width: 120%;
         text-align: center;
-        font-size: 1.6vw;
+        font-size: 1.4vw;
     }
 
     .box1 .container span{
         text-align: center;
-        font-size: 3.2vw;
+        font-size: 2.6vw;
     }
     
     .box2 .container span{
         text-align: center;
-        font-size: 3.2vw;
+        font-size: 2.6vw;
     }
+
+    .grafico h2{
+        margin: 0;
+        text-align: center;
+        font-size: 1.8rem;
+    }  
 }
 
 .kpi2 .container{
@@ -296,4 +309,23 @@ body {
 
 .kpi4 .container{
     height: 45%;
+}
+
+.elosRank{
+    display: flex;
+    justify-content: space-around;
+    width: 42vw;
+    margin-left: 1vw;
+}
+
+.elosRank div{
+    width: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elosRank div img{
+    width: 100%;
+    height: 100%;
 }

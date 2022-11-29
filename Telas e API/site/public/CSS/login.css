@@ -111,6 +111,11 @@ body {
     text-decoration: underline;
 }
 
+.campos .botaoEntrar:hover{
+    cursor: pointer;
+    background-color: #de8b5b;
+}
+
 @media screen and (max-width: 1400px){
     .formulario .forms {
         height: 64vh;

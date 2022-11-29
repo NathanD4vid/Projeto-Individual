@@ -19,4 +19,8 @@ router.get("/classe", function (req, res) {
     kpiController.classe(req, res);
 });
 
+router.get("/elosRank", function (req, res) {
+    kpiController.elosRank(req, res);
+});
+
 module.exports = router;

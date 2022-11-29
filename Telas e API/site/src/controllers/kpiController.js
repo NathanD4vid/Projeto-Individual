@@ -56,10 +56,25 @@ function classe(req, res) {
     });
 }
 
+function elosRank(req, res) {
+    kpiModel.elosRank().then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar os kpi: ", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
 
 module.exports = {
     count,
     media,
     player,
     classe,
+    elosRank,
 }

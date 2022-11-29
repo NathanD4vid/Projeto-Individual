@@ -10,7 +10,7 @@ function cadastrar(req, res) {
     // Faça as validações dos valores
     if (fkId == undefined) {
         req.status(400).send("Seu id está com erro");
-    } else {
+    } else {    
     
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js

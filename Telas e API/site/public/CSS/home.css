@@ -14,7 +14,7 @@ body {
 }
 
 .header {
-    background-color: #d8d8fc;
+    background-color: #b4b4c7;
     position: fixed;
     top: 2vh;
     z-index: 2;
@@ -112,6 +112,17 @@ body {
     color: #FFFF;
 }
 
+.logos .conteudos .navegacao{
+    padding: 0.4vw;
+    border-radius: 8px;
+}
+
+.logos .conteudos .navegacao:hover{
+    background-color: #de8b5b;
+    color: rgb(255, 255, 255);
+}
+
+
 /* SEÇÃO */
 
 .inicio {
@@ -129,13 +140,13 @@ body {
 }
 
 .inicio .container .owLeague{
+    margin-top: 10vh;
     height: 80%;
     width: 40%;
-    margin: auto;
 }
 
 .owLeague p{
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 150%;
     width: 95%;
 }
@@ -149,6 +160,13 @@ body {
 
 .inicio .container .owLeagueBanner img{
     width: 100%;
+    box-shadow: 15px 10px 10px rgba(50, 50, 50, 0.77);
+}
+
+#cadastroBotao:hover {
+    background-color: #de8b5b;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 /* SEÇÃO */
@@ -162,13 +180,13 @@ body {
 
 .classeJogo .container {
     height: 100%;
-    width: 80%;
+    width: 85%;
     display: flex;
     justify-content: space-between;
 }
 
 .campeaoTexto{
-    width: 35%;
+    width: 35vw;
 }
 
 .campeaoTexto .tabela{
@@ -180,23 +198,34 @@ body {
     align-items: center;
 }
 
+.campeaoTexto .tabela h2{
+    font-size: 2rem;
+    color: #FFFF;
+    font-weight: 500;
+    text-shadow: 0.01em 0.02em 0.3em rgb(0, 0, 0);
+}
+
 .tabela table{
     width: 100%;
     border-collapse: collapse;
     text-align: center;
-    height: 35vh;
+    height: 40vh;
 }
 
 .tabela table th {
     background-color: #F06414;
+    font-size: 1.2rem;
+    color: #FFFF;
+    text-shadow: 0.01em 0.02em 0.3em rgb(0, 0, 0);
 }
 
 .tabela table td, th{
     border: solid 1px black; 
+    font-size: 1.2rem;
 }
 
 .campeaoImagem{
-    width: 60%;
+    width: 45vw;
     display: flex;
     align-items: center;
 }
@@ -222,6 +251,7 @@ body {
 
 .campeaoImagem img{
     width: 48%;
+    box-shadow: 3px 10px 15px rgba(50, 50, 50, 0.77);
 }
 
 /* SEÇÃO */
@@ -324,6 +354,10 @@ body {
     color: #FFFF;
 }
 
+.footer span{
+    font-weight: 500;
+}
+
 #b_elo {
     width: 2.7vw;
     display: flex;
@@ -332,4 +366,8 @@ body {
 
 #elozinho{
     width: 100%;
+}
+
+#titulinho{
+    margin-top: 5vh;
 }
