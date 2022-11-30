@@ -171,9 +171,9 @@ body {
     border-radius: 1vh;
     height: 5vh;
     width: 7vw;
-}
-
-#cadastroBotao a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #FFFF;
 }
 

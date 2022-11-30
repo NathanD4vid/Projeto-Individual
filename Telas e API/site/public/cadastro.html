@@ -89,7 +89,11 @@
     function verificarNome() {
         var username = ipt_username.value;
         
-        nomeVar = username[0].toUpperCase() + username.substring(1);
+        if (username == '' || username != '') {
+            nome_Msg.innerHTML = ``;
+        }
+
+        nomeVar = username;
     }
 
     function verificarSenha() {
@@ -135,6 +139,7 @@
                 senha2_Msg.style.color = 'red';
             }
         } else if (validarEmail || validarSenha) {
+            nomeVar = nomeVar[0].toUpperCase() + nomeVar.substring(1);
             cadastrar();
         } 
     }
